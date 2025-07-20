@@ -37,3 +37,7 @@ bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/non3via/DietPi/repkapi3
 ```bash
 reboot
 ```
+
+## Результат успешной настройки
+
+![screenshot](.repkapi/dietpi-first-run.png)
