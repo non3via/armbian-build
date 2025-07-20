@@ -23,7 +23,7 @@ git clone https://github.com/non3via/armbian-build.git && cd ./armbian-build
 ## Залить образ на флэш-карту, запустить, настроить сеть, зайти под root
 
 ```bash
-sudo dd if=output/images/RepkaPi_25.05.0-trunk_Repkapi3_bookworm_legacy_6.1.104_minimal.img of=/dev/mmcblk0 bs=1M status=progress
+sudo dd if=output/images/RepkaPi_25.05.0-trunk_Repkapi3_bookworm_legacy_6.1.104_minimal.img of=/dev/mmcblk0 bs=1M status=progress iflag=direct oflag=direct
 ```
 
 ## Установить DietPi
