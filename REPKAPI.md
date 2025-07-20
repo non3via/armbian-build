@@ -10,20 +10,30 @@ Armbian-build представляет собой фреймворк автом�
 
 ## Для сборки образа клонировать репозиторий
 
-```git clone https://github.com/non3via/armbian-build.git && cd ./armbian-build```
+```bash
+git clone https://github.com/non3via/armbian-build.git && cd ./armbian-build
+```
 
 ## Собрать Armbian (minimal, legacy)
 
-```./compile.sh build BOARD=repkapi3 BRANCH=legacy BUILD_DESKTOP=no BUILD_MINIMAL=yes KERNEL_CONFIGURE=yes RELEASE=bookworm NAMESERVER=9.9.9.9```
+```bash
+./compile.sh build BOARD=repkapi3 BRANCH=legacy BUILD_DESKTOP=no BUILD_MINIMAL=yes KERNEL_CONFIGURE=yes RELEASE=bookworm NAMESERVER=9.9.9.9
+```
 
 ## Залить образ на флэш-карту, запустить, настроить сеть, зайти под root
 
-```sudo dd if=output/images/RepkaPi_25.05.0-trunk_Repkapi3_bookworm_legacy_6.1.104_minimal.img of=/dev/mmcblk0 bs=1M status=progress```
+```bash
+sudo dd if=output/images/RepkaPi_25.05.0-trunk_Repkapi3_bookworm_legacy_6.1.104_minimal.img of=/dev/mmcblk0 bs=1M status=progress
+```
 
 ## Установить DietPi
 
-```bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/non3via/DietPi/repkapi3-armbian/.build/images/dietpi-installer')"```
+```bash
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/non3via/DietPi/repkapi3-armbian/.build/images/dietpi-installer')"
+```
 
 ## Перезапустить и завершить настройку DietPi
 
-```reboot```
+```bash
+reboot
+```
