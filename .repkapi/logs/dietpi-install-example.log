@@ -1,0 +1,1077 @@
+removed '/etc/apt/apt.conf.d/02-armbian-periodic'
+removed '/etc/apt/apt.conf.d/71-armbian-no-recommends'
+removed '/etc/apt/apt.conf.d/02-armbian-postupdate'
+removed '/etc/apt/apt.conf.d/81-armbian-no-languages'
+removed '/etc/apt/apt.conf.d/01autoremove'
+removed '/etc/apt/apt.conf.d/02-armbian-compress-indexes'
+Get:1 http://security.debian.org bookworm-security InRelease [48.0 kB]
+Get:2 https://github.armbian.com/configng stable InRelease [5467 B]
+Get:3 http://security.debian.org bookworm-security/contrib arm64 Packages [508 B                                                                                                                          ]
+Get:4 http://security.debian.org bookworm-security/main arm64 Packages [268 kB]
+Get:5 https://github.armbian.com/configng stable/main arm64 Packages [425 B]
+Get:6 https://stpete-mirror.armbian.com/apt bookworm InRelease [54.1 kB]
+Get:7 https://stpete-mirror.armbian.com/apt bookworm/bookworm-desktop arm64 Packages [13.3 kB]
+Get:8 https://stpete-mirror.armbian.com/apt bookworm/bookworm-utils all Packages [10.3 kB]
+Get:9 https://stpete-mirror.armbian.com/apt bookworm/bookworm-desktop all Packages [9423 B]
+Get:10 https://stpete-mirror.armbian.com/apt bookworm/main all Packages [19.7 kB]
+Get:11 https://stpete-mirror.armbian.com/apt bookworm/main arm64 Packages [1651 kB]
+Get:12 https://stpete-mirror.armbian.com/apt bookworm/bookworm-utils arm64 Packages [160 kB]
+Get:13 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:14 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:15 http://deb.debian.org/debian bookworm-backports InRelease [59.4 kB]
+Get:16 http://deb.debian.org/debian bookworm/contrib arm64 Packages [45.7 kB]
+Get:17 http://deb.debian.org/debian bookworm/main arm64 Packages [8693 kB]
+Get:18 http://deb.debian.org/debian bookworm/non-free arm64 Packages [75.8 kB]
+Get:19 http://deb.debian.org/debian bookworm/non-free-firmware arm64 Packages [5832 B]
+Get:20 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [756 B]
+Get:21 http://deb.debian.org/debian bookworm-backports/main arm64 Packages [300 kB]
+Get:22 http://deb.debian.org/debian bookworm-backports/non-free-firmware arm64 Packages [3832 B]
+Get:23 http://deb.debian.org/debian bookworm-backports/non-free arm64 Packages [12.6 kB]
+Get:24 http://deb.debian.org/debian bookworm-backports/contrib arm64 Packages [5176 B]
+Fetched 11.6 MB in 24s (481 kB/s)
+Reading package lists... Done
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+[ INFO ] Selected Git branch: non3via/repkapi3-armbian
+[ INFO ] DietPi-Installer | Detected distribution version: Bookworm (ID: 7)
+[ INFO ] DietPi-Installer | Detected host CPU architecture: aarch64 (ID: 3)
+
+ DietPi-Installer
+─────────────────────────────────────────────────────
+ Step: [0] Detecting existing DietPi system
+
+[ INFO ] DietPi-Installer | No DietPi system found, skipping old instance uninstall...
+
+ DietPi-Installer
+─────────────────────────────────────────────────────
+ Step: [1] Target system inputs
+
+[ INFO ] DietPi-Installer | Entered image creator: non3via
+[ INFO ] DietPi-Installer | Entered pre-image info: Armbian for Repka Pi 3
+[ INFO ] DietPi-Installer | Detected target userland/OS architecture: arm64
+[ INFO ] DietPi-Installer | Selected hardware model ID: 99
+[ INFO ] DietPi-Installer | Marking WiFi as required
+[ INFO ] DietPi-Installer | Selected Debian version: bookworm (ID: 7)
+
+ DietPi-Installer
+─────────────────────────────────────────────────────
+ Step: [2] Downloading and installing DietPi source code
+
+[  OK  ] DietPi-Installer | Downloading source code
+[  OK  ] DietPi-Installer | Unpacking source code
+[  OK  ] DietPi-Installer | Removing unused files
+[  OK  ] DietPi-Installer | Hardening update archive mode
+[ INFO ] DietPi-Installer | Moving kernel and boot configuration to /boot
+[  OK  ] DietPi-Installer | mv DietPi-repkapi3-armbian/dietpi.txt /boot/
+[  OK  ] DietPi-Installer | mv DietPi-repkapi3-armbian/README.md /boot/dietpi-README.md
+[  OK  ] DietPi-Installer | mv DietPi-repkapi3-armbian/LICENSE /boot/dietpi-LICENSE.txt
+[  OK  ] DietPi-Installer | Copy DietPi scripts to /boot/dietpi
+[  OK  ] DietPi-Installer | Copy DietPi system files in place
+[  OK  ] DietPi-Installer | Clean download location
+[ INFO ] DietPi-Installer | Storing DietPi version info:
+[  OK  ] DietPi-Installer | Setting in /boot/dietpi.txt adjusted: DEV_GITBRANCH=repkapi3-armbian
+[  OK  ] DietPi-Installer | Setting in /boot/dietpi.txt adjusted: DEV_GITOWNER=non3via
+[ INFO ] DietPi-Installer | Applying DietPi live patches to fix known bugs in this version
+[ INFO ] DietPi-Installer | Applying live patch 0
+[  OK  ] DietPi-Installer | Added setting G_LIVE_PATCH_STATUS[0]='applied' to end of file /boot/dietpi/.version
+[  OK  ] DietPi-Installer | cp /boot/dietpi/.version /var/lib/dietpi/.dietpi_image_version
+[  OK  ] DietPi-Installer | systemctl daemon-reload
+
+ DietPi-Installer
+─────────────────────────────────────────────────────
+ Step: [3] APT configuration
+
+[ INFO ] DietPi-Installer | Disabling apt-daily services to prevent random APT cache lock
+[  OK  ] DietPi-Installer | systemctl disable --now apt-daily.service
+[  OK  ] DietPi-Installer | systemctl mask apt-daily.service
+[  OK  ] DietPi-Installer | systemctl disable --now apt-daily.timer
+[  OK  ] DietPi-Installer | systemctl mask apt-daily.timer
+[  OK  ] DietPi-Installer | systemctl disable --now apt-daily-upgrade.service
+[  OK  ] DietPi-Installer | systemctl mask apt-daily-upgrade.service
+[  OK  ] DietPi-Installer | systemctl disable --now apt-daily-upgrade.timer
+[  OK  ] DietPi-Installer | systemctl mask apt-daily-upgrade.timer
+[ INFO ] DietPi-Installer | Purging configs/data of removed packages
+[ INFO ] DietPi-Installer | Setting APT sources.list: bookworm 7
+[  OK  ] DietPi-Installer | /boot/dietpi/func/dietpi-set_software apt-mirror default
+[  OK  ] DietPi-Installer | mkdir -p /run/dietpi /var/tmp/dietpi/logs
+[ INFO ] DietPi-Installer | APT update, please wait...
+Hit:1 http://security.debian.org bookworm-security InRelease
+Hit:2 https://github.armbian.com/configng stable InRelease
+Hit:3 https://deb.debian.org/debian bookworm InRelease
+Get:4 https://dietpi.com/apt bookworm InRelease [3530 B]
+Hit:6 https://deb.debian.org/debian bookworm-updates InRelease
+Get:7 https://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Hit:8 https://deb.debian.org/debian bookworm-backports InRelease
+Hit:5 https://stpete-mirror.armbian.com/apt bookworm InRelease
+Get:9 https://dietpi.com/apt bookworm/main arm64 Packages [3004 B]
+Get:10 https://deb.debian.org/debian-security bookworm-security/contrib arm64 Packages [508 B]
+Get:11 https://deb.debian.org/debian-security bookworm-security/main arm64 Packages [268 kB]
+Fetched 323 kB in 3s (117 kB/s)
+Reading package lists...
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+[  OK  ] DietPi-Installer | APT update
+[ INFO ] DietPi-Installer | Marking all packages as auto-installed first, to allow effective autoremove afterwards
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:1 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (contrib/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-arm64/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+W: Target Packages (non-free-firmware/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:4 and /etc/apt/sources.list.d/debian.sources:1
+[  OK  ] DietPi-Installer | apt-mark auto adduser alsa-utils apt apt-utils armbian-bsp-cli-repkapi3-legacy armbian-config armbian-firmware base-files base-passwd bash bash-completion                    bc bsdutils ca-certificates console-setup console-setup-linux coreutils cron curl dash dbus-user-session debconf debconf-utils debian-archive-keyring debianutils debsums dialog diffut                   ils dirmngr dosfstools dpkg e2fsprogs fake-hwclock fdisk figlet findutils gcc-12-base gnupg gnupg-l10n gnupg-utils gnupg2 gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm gpg                   v gpiod grep gzip hostname htop init init-system-helpers initramfs-tools iproute2 iputils-ping iw jq kbd keyboard-configuration less libacl1 libapt-pkg6.0 libassuan0 libattr1 libaudit                   -common libaudit1 libblkid1 libbz2-1.0 libc-bin libc-l10n libc6 libcap-ng0 libcap2 libcom-err2 libcrypt1 libdb5.3 libdebconfclient0 libext2fs2 libffi8 libgcc-s1 libgcrypt20 libgmp10 l                   ibgnutls30 libgpg-error0 libhogweed6 libidn2-0 libksba8 libldap-2.5-0 liblocale-gettext-perl liblz4-1 liblzma5 libmd0 libmount1 libncursesw6 libnettle8 libnpth0 libp11-kit0 libpam-mod                   ules libpam-modules-bin libpam-runtime libpam0g libpcre2-8-0 libreadline8 libsasl2-2 libsasl2-modules-db libseccomp2 libselinux1 libsemanage-common libsemanage2 libsepol2 libsmartcols                   1 libsqlite3-0 libss2 libssl3 libstdc++6 libsystemd0 libtasn1-6 libtinfo6 libudev1 libunistring2 libuuid1 libxxhash0 libzstd1 linux-base linux-dtb-legacy-sunxi64 linux-image-legacy-su                   nxi64 linux-u-boot-repkapi3-legacy locales login logrotate logsave lsb-base lsof man-db mawk mmc-utils mount mtd-utils nano ncurses-base ncurses-bin ncurses-term netplan.io nocache op                   enssh-server openssl parted passwd perl-base pinentry-curses psmisc readline-common rsync rsyslog sed sudo systemd-resolved systemd-timesyncd sysvinit-utils tar toilet tzdata u-boot-t                   ools usbutils usr-is-merged util-linux util-linux-extra wget wireguard-tools wireless-regdb wpasupplicant xkb-data zlib1g
+[  OK  ] DietPi-Installer | mkdir -p /etc/apt/sources.list.d
+[  OK  ] DietPi-Installer | mkdir -p /etc/kernel/postinst.d /etc/kernel/postrm.d /etc/initramfs/post-update.d
+[  OK  ] DietPi-Installer | chmod +x /etc/initramfs/post-update.d/99-dietpi-uboot
+[  OK  ] DietPi-Installer | chmod +x /etc/kernel/postinst.d/dietpi-initramfs_cleanup
+[  OK  ] DietPi-Installer | ln -sf /etc/kernel/postinst.d/dietpi-initramfs_cleanup /etc/kernel/postrm.d/dietpi-initramfs_cleanup
+[  OK  ] DietPi-Installer | rmdir --ignore-fail-on-non-empty /etc/kernel/preinst.d
+[  OK  ] DietPi-Installer | eval curl -sSfL 'https://apt.armbian.com/armbian.key' | gpg --dearmor -o /etc/apt/trusted.gpg.d/dietpi-armbian.gpg --yes
+removed '/etc/apt/sources.list.d/debian.sources'
+removed '/etc/apt/sources.list.d/armbian-config.sources'
+removed '/etc/apt/sources.list.d/armbian.sources'
+[  OK  ] DietPi-Installer | eval echo 'deb https://apt.armbian.com bookworm main' > /etc/apt/sources.list.d/dietpi-armbian.list
+[ INFO ] DietPi-Installer | Preventing needless kernel and initramfs symlink generation
+[  OK  ] DietPi-Installer | eval echo 'do_symlinks=0' > /etc/kernel-img.conf
+[  OK  ] DietPi-Installer | rm -f /initrd.img /initrd.img.old /vmlinuz /vmlinuz.old
+[  OK  ] DietPi-Installer | Added setting extraargs=net.ifnames=0 to end of file /boot/armbianEnv.txt
+[  OK  ] DietPi-Installer | Desired setting in /boot/armbianEnv.txt was already set: bootlogo=false
+[  OK  ] DietPi-Installer | Setting in /boot/armbianEnv.txt adjusted: verbosity=4
+[  OK  ] DietPi-Installer | Added setting docker_optimizations=off to end of file /boot/armbianEnv.txt
+[ INFO ] DietPi-Installer | Generating list of minimal packages, required for DietPi installation
+[  OK  ] DietPi-Installer | Marking required packages as manually installed
+[  OK  ] DietPi-Installer | Hold board packages
+[ INFO ] DietPi-Installer | APT autopurge gawk original-awk, please wait...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'gawk' is not installed, so not removed
+Package 'original-awk' is not installed, so not removed
+The following packages will be REMOVED:
+  alsa-utils* apt-utils* armbian-bsp-cli-repkapi3-legacy* armbian-config* bc*
+  bsdextrautils* dbus* dbus-bin* dbus-daemon* dbus-session-bus-common*
+  dbus-system-bus-common* dbus-user-session* debconf-utils* debsums*
+  device-tree-compiler* dialog* dirmngr* dosfstools* figlet* fping* gnupg*
+  gnupg-l10n* gnupg-utils* gnupg2* gpg-agent* gpg-wks-client* gpg-wks-server*
+  gpgsm* gpiod* groff-base* iproute2* jq* less* libasound2* libasound2-data*
+  libatopology2* libbpf1* libbsd0* libcaca0* libcbor0.8* libdpkg-perl*
+  libedit2* libelf1* libestr0* libexpat1* libfastjson4* libfdt1*
+  libfftw3-single3* libfido2-1* libfile-fnmatch-perl* libgdbm-compat4*
+  libgdbm6* libglib2.0-0* libgomp1* libgpiod2* libiniparser1* libjq1*
+  libksba8* liblognorm5* liblzo2-2* libmnl0* libnetplan0* libnpth0* libnsl2*
+  libonig5* libpam-systemd* libperl5.36* libpipeline1* libpython3-stdlib*
+  libpython3.11-minimal* libpython3.11-stdlib* libsamplerate0*
+  libtext-iconv-perl* libtirpc-common* libtirpc3* libuchardet0* libwrap0*
+  libxtables12* libyaml-0-2* logrotate* lsb-base* lsb-release* lsof* man-db*
+  media-types* mmc-utils* mtd-utils* ncurses-term* netbase* netplan.io*
+  nocache* openssh-client* openssh-server* openssh-sftp-server* perl*
+  perl-modules-5.36* pinentry-curses* python3* python3-dbus*
+  python3-markdown-it* python3-mdurl* python3-minimal* python3-netifaces*
+  python3-pkg-resources* python3-pygments* python3-rich* python3-yaml*
+  python3.11* python3.11-minimal* rsync* rsyslog* runit-helper*
+  systemd-resolved* toilet* toilet-fonts* ucf* wireguard-tools*
+0 upgraded, 0 newly installed, 117 to remove and 3 not upgraded.
+                                                                After this operation, 165 MB disk space will be freed.
+(Reading database ... 25758 files and directories currently installed.)                                               (Reading database ...
+Removing alsa-utils (1.2.8-1) ...
+Removing apt-utils (2.6.1) ...
+Removing armbian-bsp-cli-repkapi3-legacy (25.05.0-trunk) ...
+Armbian 'armbian-bsp-cli-repkapi3-legacy' for '1-PC9050-V7ffe-H01ba-B6e44-R89c9': 'postrm' starting.
+Armbian 'armbian-bsp-cli-repkapi3-legacy' for '1-PC9050-V7ffe-H01ba-B6e44-R89c9': 'postrm' finishing.
+Removing armbian-config (25.8.0-trunk.380.0718.155006) ...
+Removing bc (1.07.1-3) ...
+Removing man-db (2.11.2-2) ...
+Removing bsdextrautils (2.38.1-5+deb12u3) ...
+Removing systemd-resolved (252.38-1~deb12u1) ...
+Removing /etc/resolv.conf symlink to /run/systemd/resolve/stub-resolv.conf...
+Copying /run/systemd/resolve/resolv.conf to /etc/resolv.conf...
+Removing dbus-user-session (1.14.10-1~deb12u1) ...
+Removing libpam-systemd:arm64 (252.38-1~deb12u1) ...
+Removing dbus (1.14.10-1~deb12u1) ...
+Removing dbus-daemon (1.14.10-1~deb12u1) ...
+Removing dbus-bin (1.14.10-1~deb12u1) ...
+Removing dbus-session-bus-common (1.14.10-1~deb12u1) ...
+Removing dbus-system-bus-common (1.14.10-1~deb12u1) ...
+Removing debconf-utils (1.5.82) ...
+Removing debsums (3.0.2.1) ...
+Removing device-tree-compiler (1.6.1-4+b1) ...
+Removing dialog (1.3-20230209-1) ...
+Removing gnupg2 (2.2.40-1.1) ...
+Removing gnupg (2.2.40-1.1) ...
+Removing gpg-wks-client (2.2.40-1.1) ...
+Removing dirmngr (2.2.40-1.1) ...
+Removing dosfstools (4.2-1) ...
+Removing figlet (2.2.5-3) ...
+update-alternatives: using /usr/bin/figlet-toilet to provide /usr/bin/figlet (figlet) in auto mode
+Removing fping (5.1-1) ...
+Removing gnupg-l10n (2.2.40-1.1) ...
+Removing gnupg-utils (2.2.40-1.1) ...
+Removing gpg-wks-server (2.2.40-1.1) ...
+Removing gpg-agent (2.2.40-1.1) ...
+Removing gpgsm (2.2.40-1.1) ...
+Removing gpiod (1.6.3-1+b3) ...
+Removing groff-base (1.22.4-10) ...
+Removing netplan.io (0.106-2+deb12u1) ...
+dpkg: warning: while removing netplan.io, directory '/etc/netplan' not empty so not removed
+Removing iproute2 (6.1.0-3) ...
+Removing jq (1.6-2.1) ...
+Removing less (590-2.1~deb12u2) ...
+Removing libatopology2:arm64 (1.2.8-1+b1) ...
+Removing libasound2:arm64 (1.2.8-1+b1) ...
+Removing libasound2-data (1.2.8-1) ...
+Removing libbpf1:arm64 (1:1.1.0-1) ...
+Removing openssh-server (1:9.2p1-2+deb12u6) ...
+Removing openssh-sftp-server (1:9.2p1-2+deb12u6) ...
+Removing openssh-client (1:9.2p1-2+deb12u6) ...
+Removing libedit2:arm64 (3.1-20221030-2) ...
+Removing libbsd0:arm64 (0.11.7-2) ...
+Removing toilet (0.3-1.4) ...
+Removing libcaca0:arm64 (0.99.beta20-3) ...
+Removing libfido2-1:arm64 (1.12.0-2+b1) ...
+Removing libcbor0.8:arm64 (0.8.0-2+b1) ...
+Removing libdpkg-perl (1.21.22) ...
+Removing libelf1:arm64 (0.188-2.1) ...
+Removing rsyslog (8.2302.0-1+deb12u1) ...
+Removing liblognorm5:arm64 (2.0.6-4) ...
+Removing libestr0:arm64 (0.1.11-1) ...
+Removing python3-rich (13.3.1-1) ...
+Removing python3-pygments (2.14.0+dfsg-1) ...
+Removing python3-pkg-resources (66.1.1-1+deb12u1) ...
+Removing python3-yaml (6.0-3+b2) ...
+Removing python3-markdown-it (2.1.0-5) ...
+Removing python3-mdurl (0.1.2-1) ...
+Removing libfastjson4:arm64 (1.2304.0-1) ...
+Removing libfdt1:arm64 (1.6.1-4+b1) ...
+Removing libfftw3-single3:arm64 (3.3.10-1) ...
+Removing libfile-fnmatch-perl (0.02-3+b1) ...
+Removing perl (5.36.0-7+deb12u2) ...
+Removing libperl5.36:arm64 (5.36.0-7+deb12u2) ...
+Removing libgdbm-compat4:arm64 (1.23-3) ...
+Removing libgdbm6:arm64 (1.23-3) ...
+Removing libnetplan0:arm64 (0.106-2+deb12u1) ...
+Removing python3-dbus (1.3.2-4+b1) ...
+Removing libglib2.0-0:arm64 (2.74.6-2+deb12u6) ...
+Removing libgomp1:arm64 (12.2.0-14+deb12u1) ...
+Removing libgpiod2:arm64 (1.6.3-1+b3) ...
+Removing mtd-utils (1:2.1.5-1) ...
+Removing libiniparser1:arm64 (4.1-6) ...
+Removing libjq1:arm64 (1.6-2.1) ...
+Removing libksba8:arm64 (1.6.3-2) ...
+Removing liblzo2-2:arm64 (2.10-2) ...
+Removing libmnl0:arm64 (1.0.4-3) ...
+Removing libnpth0:arm64 (1.6-3) ...
+Removing libwrap0:arm64 (7.6.q-32) ...
+Removing libonig5:arm64 (6.9.8-1) ...
+Removing libpipeline1:arm64 (1.5.7-1) ...
+Removing libsamplerate0:arm64 (0.2.2-3) ...
+Removing libtext-iconv-perl:arm64 (1.7-8) ...
+Removing lsof (4.95.0-1) ...
+Removing libuchardet0:arm64 (0.0.7-1) ...
+Removing libxtables12:arm64 (1.8.9-2) ...
+Removing libyaml-0-2:arm64 (0.2.5-1) ...
+Removing logrotate (3.21.0-1) ...
+Removing rsync (3.2.7-1+deb12u2) ...
+Removing lsb-base (11.6) ...
+Removing lsb-release (12.0-1) ...
+Removing mmc-utils (0+git20220624.d7b343fd-1) ...
+Removing ncurses-term (6.4-4) ...
+Removing netbase (6.4) ...
+Removing nocache (1.1-1) ...
+Removing perl-modules-5.36 (5.36.0-7+deb12u2) ...
+Removing pinentry-curses (1.2.1-1) ...
+Removing python3-netifaces:arm64 (0.11.0-2+b1) ...
+Removing runit-helper (2.15.2) ...
+Removing toilet-fonts (0.3-1.4) ...
+Removing ucf (3.0043+nmu1+deb12u1) ...
+Removing wireguard-tools (1.0.20210914-1+b1) ...
+Removing python3 (3.11.2-1+b1) ...
+Removing python3.11 (3.11.2-6+deb12u6) ...
+Removing python3-minimal (3.11.2-1+b1) ...
+Removing python3.11-minimal (3.11.2-6+deb12u6) ...
+Removing libexpat1:arm64 (2.5.0-1+deb12u1) ...
+Removing libpython3-stdlib:arm64 (3.11.2-1+b1) ...
+Removing libpython3.11-stdlib:arm64 (3.11.2-6+deb12u6) ...
+find: ‘/usr/lib/python3’: No such file or directory
+Removing libnsl2:arm64 (1.3.0-2) ...
+Removing libpython3.11-minimal:arm64 (3.11.2-6+deb12u6) ...
+find: ‘/usr/lib/python3’: No such file or directory
+Removing libtirpc3:arm64 (1.3.3+ds-1) ...
+Removing libtirpc-common (1.3.3+ds-1) ...
+Removing media-types (10.0.0) ...
+Processing triggers for libc-bin (2.36-9+deb12u10) ...
+Processing triggers for systemd (252.38-1~deb12u1) ...
+Processing triggers for initramfs-tools (0.142+deb12u3) ...
+update-initramfs: Generating /boot/initrd.img-6.1.104-legacy-sunxi64
+update-initramfs: Converting to U-Boot format
+Image Name:   uInitrd
+Created:      Mon Jul 21 16:36:13 2025
+Image Type:   AArch64 Linux RAMDisk Image (gzip compressed)
+Data Size:    11523683 Bytes = 11253.60 KiB = 10.99 MiB
+Load Address: 00000000
+Entry Point:  00000000
+'/boot/uInitrd' -> 'uInitrd-6.1.104-legacy-sunxi64'
+(Reading database ... 16592 files and directories currently installed.)
+Purging configuration files for logrotate (3.21.0-1) ...
+Purging configuration files for media-types (10.0.0) ...
+Purging configuration files for python3.11-minimal (3.11.2-6+deb12u6) ...
+Purging configuration files for gpg-agent (2.2.40-1.1) ...
+Purging configuration files for openssh-server (1:9.2p1-2+deb12u6) ...
+Purging configuration files for libglib2.0-0:arm64 (2.74.6-2+deb12u6) ...
+Purging configuration files for iproute2 (6.1.0-3) ...
+Purging configuration files for openssh-client (1:9.2p1-2+deb12u6) ...
+Purging configuration files for libtirpc-common (1.3.3+ds-1) ...
+Purging configuration files for armbian-bsp-cli-repkapi3-legacy (25.05.0-trunk) ...
+Armbian 'armbian-bsp-cli-repkapi3-legacy' for '1-PC9050-V7ffe-H01ba-B6e44-R89c9': 'postrm' starting.
+Armbian 'armbian-bsp-cli-repkapi3-legacy' for '1-PC9050-V7ffe-H01ba-B6e44-R89c9': 'postrm' finishing.
+dpkg: warning: while removing armbian-bsp-cli-repkapi3-legacy, directory '/etc/initramfs/post-update.d' not empty so not removed
+dpkg: warning: while removing armbian-bsp-cli-repkapi3-legacy, directory '/usr/lib/chromium-browser' not empty so not removed
+Purging configuration files for rsyslog (8.2302.0-1+deb12u1) ...
+Purging configuration files for bc (1.07.1-3) ...
+Purging configuration files for python3 (3.11.2-1+b1) ...
+Purging configuration files for dbus-daemon (1.14.10-1~deb12u1) ...
+Purging configuration files for man-db (2.11.2-2) ...
+  Removing catpages as well as /var/cache/man hierarchy.
+Purging configuration files for dirmngr (2.2.40-1.1) ...
+Purging configuration files for alsa-utils (1.2.8-1) ...
+Purging configuration files for dbus-user-session (1.14.10-1~deb12u1) ...
+Purging configuration files for perl (5.36.0-7+deb12u2) ...
+Purging configuration files for libwrap0:arm64 (7.6.q-32) ...
+Purging configuration files for dbus (1.14.10-1~deb12u1) ...
+rmdir: failed to remove '/var/run/dbus': Directory not empty
+rmdir: failed to remove '/var/lib/dbus': No such file or directory
+Purging configuration files for figlet (2.2.5-3) ...
+Purging configuration files for wireguard-tools (1.0.20210914-1+b1) ...
+Purging configuration files for ucf (3.0043+nmu1+deb12u1) ...
+Purging configuration files for groff-base (1.22.4-10) ...
+Purging configuration files for netbase (6.4) ...
+Purging configuration files for libpython3.11-minimal:arm64 (3.11.2-6+deb12u6) ...
+Purging configuration files for debsums (3.0.2.1) ...
+Purging configuration files for rsync (3.2.7-1+deb12u2) ...
+Purging configuration files for systemd-resolved (252.38-1~deb12u1) ...
+[  OK  ] DietPi-Installer | APT autopurge gawk original-awk
+
+ DietPi-Installer
+─────────────────────────────────────────────────────
+ Step: [4] APT installations
+
+[ INFO ] DietPi-Installer | APT dist-upgrade, please wait...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages have been kept back:
+  armbian-firmware linux-dtb-legacy-sunxi64 linux-image-legacy-sunxi64
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+[  OK  ] DietPi-Installer | APT dist-upgrade
+[ INFO ] DietPi-Installer | Installing core DietPi pre-req DEB packages
+[ INFO ] DietPi-Installer | APT install apt bash-completion ca-certificates cron curl fdisk gpg htop iputils-ping locales mawk nano parted procps psmisc sudo systemd-sysv tzdata udev                    wget whiptail e2fsprogs console-setup dropbear ethtool fake-hwclock ifupdown isc-dhcp-client kmod rfkill systemd-timesyncd usbutils hdparm initramfs-tools u-boot-tools iw wireless-too                   ls wpasupplicant wireless-regdb, please wait...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apt is already the newest version (2.6.1).
+bash-completion is already the newest version (1:2.11-6).
+ca-certificates is already the newest version (20230311+deb12u1).
+cron is already the newest version (3.0pl1-162).
+curl is already the newest version (7.88.1-10+deb12u12).
+fdisk is already the newest version (2.38.1-5+deb12u3).
+gpg is already the newest version (2.2.40-1.1).
+htop is already the newest version (3.2.2-2).
+iputils-ping is already the newest version (3:20221126-1+deb12u1).
+locales is already the newest version (2.36-9+deb12u10).
+mawk is already the newest version (1.3.4.20200120-3.1).
+nano is already the newest version (7.2-1+deb12u1).
+parted is already the newest version (3.5-3).
+procps is already the newest version (2:4.0.2-3).
+psmisc is already the newest version (23.6-1).
+sudo is already the newest version (1.9.13p3-1+deb12u2).
+systemd-sysv is already the newest version (252.38-1~deb12u1).
+tzdata is already the newest version (2025b-0+deb12u1).
+udev is already the newest version (252.38-1~deb12u1).
+wget is already the newest version (1.21.3-1+deb12u1).
+whiptail is already the newest version (0.52.23-1+b1).
+e2fsprogs is already the newest version (1.47.0-2).
+console-setup is already the newest version (1.221).
+fake-hwclock is already the newest version (0.12+nmu1).
+kmod is already the newest version (30+20221128-1).
+systemd-timesyncd is already the newest version (252.38-1~deb12u1).
+usbutils is already the newest version (1:014-1+deb12u1).
+initramfs-tools is already the newest version (0.142+deb12u3).
+u-boot-tools is already the newest version (2023.01+dfsg-2+deb12u1).
+iw is already the newest version (5.19-1).
+wpasupplicant is already the newest version (2:2.10-12+deb12u2).
+wireless-regdb is already the newest version (2025.02.20-1~deb12u1).
+The following additional packages will be installed:
+  dropbear-bin iproute2 libbpf1 libbsd0 libelf1 libiw30 libmnl0
+  libtirpc-common libtirpc3 libtomcrypt1 libtommath1 libxtables12
+Suggested packages:
+  dropbear-initramfs runit openssh-client ppp rdnssd iproute2-doc python3:any
+  resolvconf avahi-autoipd isc-dhcp-client-ddns
+Recommended packages:
+  powermgmt-base libatm1 isc-dhcp-common
+The following NEW packages will be installed:
+  dropbear dropbear-bin ethtool hdparm ifupdown iproute2 isc-dhcp-client
+  libbpf1 libbsd0 libelf1 libiw30 libmnl0 libtirpc-common libtirpc3
+  libtomcrypt1 libtommath1 libxtables12 rfkill wireless-tools
+0 upgraded, 19 newly installed, 0 to remove and 3 not upgraded.
+Need to get 3721 kB of archives.
+After this operation, 13.3 MB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian bookworm/main arm64 libtommath1 arm64 1.2.0-6+deb12u1 [62.8 kB]
+Get:2 https://deb.debian.org/debian bookworm/main arm64 libtomcrypt1 arm64 1.18.2-6 [400 kB]
+Get:3 https://deb.debian.org/debian bookworm/main arm64 dropbear-bin arm64 2022.83-1+deb12u2 [143 kB]
+Get:4 https://deb.debian.org/debian bookworm/main arm64 dropbear all 2022.83-1+deb12u2 [41.1 kB]
+Get:5 https://deb.debian.org/debian bookworm/main arm64 libelf1 arm64 0.188-2.1 [173 kB]
+Get:6 https://deb.debian.org/debian bookworm/main arm64 libbpf1 arm64 1:1.1.0-1 [136 kB]
+Get:7 https://deb.debian.org/debian bookworm/main arm64 libbsd0 arm64 0.11.7-2 [115 kB]
+Get:8 https://deb.debian.org/debian bookworm/main arm64 libmnl0 arm64 1.0.4-3 [12.1 kB]
+Get:9 https://deb.debian.org/debian bookworm/main arm64 libtirpc-common all 1.3.3+ds-1 [14.0 kB]
+Get:10 https://deb.debian.org/debian bookworm/main arm64 libtirpc3 arm64 1.3.3+ds-1 [80.9 kB]
+Get:11 https://deb.debian.org/debian bookworm/main arm64 libxtables12 arm64 1.8.9-2 [29.6 kB]
+Get:12 https://deb.debian.org/debian bookworm/main arm64 iproute2 arm64 6.1.0-3 [1008 kB]
+Get:13 https://deb.debian.org/debian bookworm/main arm64 ifupdown arm64 0.8.41 [60.1 kB]
+Get:14 https://deb.debian.org/debian bookworm/main arm64 isc-dhcp-client arm64 4.4.3-P1-2 [992 kB]
+Get:15 https://deb.debian.org/debian bookworm/main arm64 ethtool arm64 1:6.1-1 [184 kB]
+Get:16 https://deb.debian.org/debian bookworm/main arm64 hdparm arm64 9.65+ds-1 [111 kB]
+Get:17 https://deb.debian.org/debian bookworm/main arm64 libiw30 arm64 30~pre9-14 [15.6 kB]
+Get:18 https://deb.debian.org/debian bookworm/main arm64 rfkill arm64 2.38.1-5+deb12u3 [37.3 kB]
+Get:19 https://deb.debian.org/debian bookworm/main arm64 wireless-tools arm64 30~pre9-14 [107 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3721 kB in 2s (2308 kB/s)
+                                 Selecting previously unselected package libtommath1:arm64.
+(Reading database ... 16500 files and directories currently installed.)
+Preparing to unpack .../00-libtommath1_1.2.0-6+deb12u1_arm64.deb ...
+Unpacking libtommath1:arm64 (1.2.0-6+deb12u1) ...
+Selecting previously unselected package libtomcrypt1:arm64.
+Preparing to unpack .../01-libtomcrypt1_1.18.2-6_arm64.deb ...
+Unpacking libtomcrypt1:arm64 (1.18.2-6) ...
+Selecting previously unselected package dropbear-bin.
+Preparing to unpack .../02-dropbear-bin_2022.83-1+deb12u2_arm64.deb ...
+Unpacking dropbear-bin (2022.83-1+deb12u2) ...
+Selecting previously unselected package dropbear.
+Preparing to unpack .../03-dropbear_2022.83-1+deb12u2_all.deb ...
+Unpacking dropbear (2022.83-1+deb12u2) ...
+Selecting previously unselected package libelf1:arm64.
+Preparing to unpack .../04-libelf1_0.188-2.1_arm64.deb ...
+Unpacking libelf1:arm64 (0.188-2.1) ...
+Selecting previously unselected package libbpf1:arm64.
+Preparing to unpack .../05-libbpf1_1%3a1.1.0-1_arm64.deb ...
+Unpacking libbpf1:arm64 (1:1.1.0-1) ...
+Selecting previously unselected package libbsd0:arm64.
+Preparing to unpack .../06-libbsd0_0.11.7-2_arm64.deb ...
+Unpacking libbsd0:arm64 (0.11.7-2) ...
+Selecting previously unselected package libmnl0:arm64.
+Preparing to unpack .../07-libmnl0_1.0.4-3_arm64.deb ...
+Unpacking libmnl0:arm64 (1.0.4-3) ...
+Selecting previously unselected package libtirpc-common.
+Preparing to unpack .../08-libtirpc-common_1.3.3+ds-1_all.deb ...
+Unpacking libtirpc-common (1.3.3+ds-1) ...
+Selecting previously unselected package libtirpc3:arm64.
+Preparing to unpack .../09-libtirpc3_1.3.3+ds-1_arm64.deb ...
+Unpacking libtirpc3:arm64 (1.3.3+ds-1) ...
+Selecting previously unselected package libxtables12:arm64.
+Preparing to unpack .../10-libxtables12_1.8.9-2_arm64.deb ...
+Unpacking libxtables12:arm64 (1.8.9-2) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../11-iproute2_6.1.0-3_arm64.deb ...
+Unpacking iproute2 (6.1.0-3) ...
+Selecting previously unselected package ifupdown.
+Preparing to unpack .../12-ifupdown_0.8.41_arm64.deb ...
+Unpacking ifupdown (0.8.41) ...
+Selecting previously unselected package isc-dhcp-client.
+Preparing to unpack .../13-isc-dhcp-client_4.4.3-P1-2_arm64.deb ...
+Unpacking isc-dhcp-client (4.4.3-P1-2) ...
+Selecting previously unselected package ethtool.
+Preparing to unpack .../14-ethtool_1%3a6.1-1_arm64.deb ...
+Unpacking ethtool (1:6.1-1) ...
+Selecting previously unselected package hdparm.
+Preparing to unpack .../15-hdparm_9.65+ds-1_arm64.deb ...
+Unpacking hdparm (9.65+ds-1) ...
+Selecting previously unselected package libiw30:arm64.
+Preparing to unpack .../16-libiw30_30~pre9-14_arm64.deb ...
+Unpacking libiw30:arm64 (30~pre9-14) ...
+Selecting previously unselected package rfkill.
+Preparing to unpack .../17-rfkill_2.38.1-5+deb12u3_arm64.deb ...
+Unpacking rfkill (2.38.1-5+deb12u3) ...
+Selecting previously unselected package wireless-tools.
+Preparing to unpack .../18-wireless-tools_30~pre9-14_arm64.deb ...
+Unpacking wireless-tools (30~pre9-14) ...
+Setting up libtommath1:arm64 (1.2.0-6+deb12u1) ...
+Setting up libtirpc-common (1.3.3+ds-1) ...
+
+Configuration file '/etc/netconfig', does not exist on system.
+Installing new config file as you requested.
+Setting up hdparm (9.65+ds-1) ...
+
+Configuration file '/etc/hdparm.conf', does not exist on system.
+Installing new config file as you requested.
+Setting up rfkill (2.38.1-5+deb12u3) ...
+Setting up libmnl0:arm64 (1.0.4-3) ...
+Setting up libxtables12:arm64 (1.8.9-2) ...
+Setting up libbsd0:arm64 (0.11.7-2) ...
+Setting up libelf1:arm64 (0.188-2.1) ...
+Setting up libiw30:arm64 (30~pre9-14) ...
+Setting up libbpf1:arm64 (1:1.1.0-1) ...
+Setting up ethtool (1:6.1-1) ...
+
+Configuration file '/etc/network/if-pre-up.d/ethtool', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/network/if-up.d/ethtool', does not exist on system.
+Installing new config file as you requested.
+Setting up libtomcrypt1:arm64 (1.18.2-6) ...
+Setting up libtirpc3:arm64 (1.3.3+ds-1) ...
+Setting up dropbear-bin (2022.83-1+deb12u2) ...
+Setting up iproute2 (6.1.0-3) ...
+
+Configuration file '/etc/iproute2/bpf_pinning', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/ematch_map', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/group', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/nl_protos', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/rt_dsfield', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/rt_protos', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/rt_protos.d/README', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/rt_realms', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/rt_scopes', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/rt_tables', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/iproute2/rt_tables.d/README', does not exist on system.
+Installing new config file as you requested.
+Setting up wireless-tools (30~pre9-14) ...
+
+Configuration file '/etc/network/if-post-down.d/wireless-tools', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/network/if-pre-up.d/wireless-tools', does not exist on system.
+Installing new config file as you requested.
+Setting up isc-dhcp-client (4.4.3-P1-2) ...
+
+Configuration file '/etc/apparmor.d/sbin.dhclient', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/dhcp/debug', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/dhcp/dhclient-exit-hooks.d/rfc3442-classless-routes', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/dhcp/dhclient.conf', does not exist on system.
+Installing new config file as you requested.
+Setting up dropbear (2022.83-1+deb12u2) ...
+
+Configuration file '/etc/default/dropbear', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/dropbear/log/run', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/dropbear/run', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/init.d/dropbear', does not exist on system.
+Installing new config file as you requested.
+Generating Dropbear RSA host key.  Please wait.
+Generating 2048 bit rsa key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC18RCHi3y3BxTACvmkXqDQf+oVRrf9KcmYw6trDwxOkVb18slIXH4LBzaclanCYU3vYxXofEenA9VzVvHDnLIoaAi9PdjtoVoTBhyhm6ctJwljart12p9v9nLoNCREYczJI8zRDJVdwIkrJ/d                   U+sEyUqxHGe5IrjlXCjwBgnBYTRcezN/HvIHlu6kAOEFcVcADxYWlyd2bnnx/82pQEw85kTBTIYiLzK0gELS4ud34HNMQTbhZoMfAdwmyUKXVUk4VyXw/ybmtuxUMOT5lK4K5W0SbnS8Ckxc5kWdBdFH4Czt0IVA+YV206YwSjQ7HpQ82XSMK5R                   y/QDBdw/wFMuHt root@repkapi3
+Fingerprint: SHA256:d11zOwRroFpb3mec6/Dat2h/fR12jRWkT8/c7K6bVfA
+Generating Dropbear ECDSA host key.  Please wait.
+Generating 256 bit ecdsa key, this may take a while...
+Public key portion is:
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBO+KDgL9BIpQffvj9N1Zj++wkdZoBmRbYhZXztgl08iB5wPEO/8Hnpf4kLetuK/UNuc84E6tk56FAXxIBURkhbk= root@repkapi3
+Fingerprint: SHA256:xTrqr5xehMsb+z5/A8AOZdnNeo5CeDcUEhweLE96gOQ
+Generating Dropbear ED25519 host key.  Please wait.
+Generating 256 bit ed25519 key, this may take a while...
+Public key portion is:
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGjxTLB7OD5n+o5OW/dU5eWoCNtxM11YEI24mqg4ToLQ root@repkapi3
+Fingerprint: SHA256:Smj7R46rNjI0btwcovhq0bcWr13elOkfgOYt5UQgCSU
+Created symlink /etc/systemd/system/multi-user.target.wants/dropbear.service → /lib/systemd/system/dropbear.service.
+Setting up ifupdown (0.8.41) ...
+
+Configuration file '/etc/default/networking', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/init.d/networking', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/network/if-down.d/resolved', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file '/etc/network/if-up.d/resolved', does not exist on system.
+Installing new config file as you requested.
+Creating /etc/network/interfaces.
+Created symlink /etc/systemd/system/multi-user.target.wants/networking.service → /lib/systemd/system/networking.service.
+Created symlink /etc/systemd/system/network-online.target.wants/networking.service → /lib/systemd/system/networking.service.
+Processing triggers for libc-bin (2.36-9+deb12u10) ...
+[  OK  ] DietPi-Installer | APT install apt bash-completion ca-certificates cron curl fdisk gpg htop iputils-ping locales mawk nano parted procps psmisc sudo systemd-sysv tzdata udev                    wget whiptail e2fsprogs console-setup dropbear ethtool fake-hwclock ifupdown isc-dhcp-client kmod rfkill systemd-timesyncd usbutils hdparm initramfs-tools u-boot-tools iw wireless-too                   ls wpasupplicant wireless-regdb
+[ INFO ] DietPi-Installer | APT autopurge, please wait...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+[  OK  ] DietPi-Installer | APT autopurge
+
+ DietPi-Installer
+─────────────────────────────────────────────────────
+ Step: [5] Applying DietPi tweaks and cleanup
+
+[ INFO ] DietPi-Installer | Restoring default base files:
+removed '/etc/motd'
+removed '/etc/profile'
+removed directory '/etc/update-motd.d'
+removed '/etc/issue'
+removed '/etc/issue.net'
+removed directory '/root/.ssh'
+removed '/root/.wget-hsts'
+removed '/root/.profile'
+removed '/root/.bash_aliases'
+removed '/root/.bashrc'
+removed '/root/.gnupg/pubring.kbx'
+removed '/root/.gnupg/trustdb.gpg'
+removed directory '/root/.gnupg'
+removed directory '/root'
+removed '/home/master/.Xauthority'
+removed '/home/master/.bash_logout'
+removed '/home/master/.xsessionrc'
+removed '/home/master/.profile'
+removed '/home/master/.bash_aliases'
+removed '/home/master/.bashrc'
+removed directory '/home/master'
+removed directory '/home'
+removed directory '/media'
+removed directory '/var/mail'
+[  OK  ] DietPi-Installer | mkdir -p /root
+[ INFO ] DietPi-Installer | APT install --reinstall base-files, please wait...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reinstallation of base-files is not possible, it cannot be downloaded.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+[  OK  ] DietPi-Installer | APT install --reinstall base-files
+[  OK  ] DietPi-Installer | rm -R /var/lock
+[  OK  ] DietPi-Installer | ln -s /run/lock /var/lock
+[  OK  ] DietPi-Installer | /var/lib/dpkg/info/base-files.postinst configure
+[ INFO ] DietPi-Installer | Deleting list of known users and groups, not required by DietPi
+[ INFO ] DietPi-Installer | Resetting root user account
+[  OK  ] DietPi-Installer | usermod -d /root -s /bin/bash root
+[  OK  ] DietPi-Installer | eval chpasswd <<< 'root:dietpi'
+[  OK  ] DietPi-Installer | Creating DietPi user account
+[ INFO ] DietPi-Installer | Removing misc files/folders/services, not required by DietPi
+[  OK  ] DietPi-Installer | rm /boot/boot.bmp
+[  OK  ] DietPi-Installer | rm -R /selinux
+[  OK  ] DietPi-Installer | rm -Rf /var/lib/dhcp/* /var/lib/dhcp/.??* /var/lib/dhcp/.[^.]*
+[  OK  ] DietPi-Installer | rm -f /var/lib/misc/*.leases
+[  OK  ] DietPi-Installer | rm -Rf /var/backups/* /var/backups/.??* /var/backups/.[^.]*
+[  OK  ] DietPi-Installer | rm -f /etc/*.org
+[  OK  ] DietPi-Installer | rm -Rf /usr/src/* /usr/src/.??* /usr/src/.[^.]*
+removed '/etc/ca-certificates.conf.dpkg-old'
+[  OK  ] DietPi-Installer | rm -R /usr/share/icons
+[  OK  ] DietPi-Installer | update-rc.d -f fake-hwclock remove
+[  OK  ] DietPi-Installer | update-rc.d -f haveged remove
+[  OK  ] DietPi-Installer | update-rc.d -f hwclock.sh remove
+[  OK  ] DietPi-Installer | update-rc.d -f networking remove
+[  OK  ] DietPi-Installer | update-rc.d -f udev remove
+[  OK  ] DietPi-Installer | update-rc.d -f cron remove
+[  OK  ] DietPi-Installer | update-rc.d -f console-setup.sh remove
+[  OK  ] DietPi-Installer | update-rc.d -f sudo remove
+[  OK  ] DietPi-Installer | update-rc.d -f cpu_governor remove
+[  OK  ] DietPi-Installer | update-rc.d -f keyboard-setup.sh remove
+[  OK  ] DietPi-Installer | update-rc.d -f kmod remove
+[  OK  ] DietPi-Installer | update-rc.d -f procps remove
+[  OK  ] DietPi-Installer | update-rc.d -f leds.sh remove
+[  OK  ] DietPi-Installer | update-rc.d -f rockchip.sh remove
+[  OK  ] DietPi-Installer | update-rc.d -f S10atomic_commit.sh remove
+[  OK  ] DietPi-Installer | rm -R /var/log.hdd
+[  OK  ] DietPi-Installer | rm /etc/armbian-image-release
+[  OK  ] DietPi-Installer | rm -R /etc/armbianmonitor
+[  OK  ] DietPi-Installer | rm -f /etc/default/armbian-firstrun /etc/default/armbian-motd /etc/default/armbian-ramlog /etc/default/armbian-zram-config /etc/logrotate.d/armbian-hardwar                   e-monitor
+[  OK  ] DietPi-Installer | rm -f /etc/cron.*/openmediavault*
+[  OK  ] DietPi-Installer | rm -f /usr/sbin/omv-*
+[  OK  ] DietPi-Installer | rm /etc/rc.local
+[  OK  ] DietPi-Installer | rm -f /etc/systemd/system/*getty@*.service.d/*autologin*.conf
+[  OK  ] DietPi-Installer | rm -f /lib/systemd/system/*getty@*.service.d/override.conf
+[ INFO ] DietPi-Installer | Setting modern /usr/local permissions
+[  OK  ] DietPi-Installer | chown -R root:root /usr/local
+[  OK  ] DietPi-Installer | chmod -R g-w /usr/local
+[  OK  ] DietPi-Installer | ln -sf /etc/profile.d/bash_completion.sh /etc/bashrc.d/dietpi-bash_completion.sh
+[  OK  ] DietPi-Installer | Setting setuid bit for "sudo" executable
+[ INFO ] DietPi-Installer | Generating DietPi directories
+[  OK  ] DietPi-Installer | mkdir -p /var/lib/dietpi/postboot.d /var/lib/dietpi/dietpi-software/installed
+[  OK  ] DietPi-Installer | mkdir -p /var/tmp/dietpi/logs/dietpi-ramlog_store
+[  OK  ] DietPi-Installer | mkdir -p /mnt/dietpi_userdata /mnt/samba /mnt/ftp_client /mnt/nfs_client
+[  OK  ] DietPi-Installer | chgrp -R dietpi /mnt/dietpi_userdata /mnt/samba /mnt/ftp_client /mnt/nfs_client
+[  OK  ] DietPi-Installer | find /mnt/dietpi_userdata /mnt/samba /mnt/ftp_client /mnt/nfs_client -type d -exec chmod 0775 {} +
+[ INFO ] DietPi-Installer | Enabling DietPi services
+[  OK  ] DietPi-Installer | systemctl enable dietpi-ramlog
+[  OK  ] DietPi-Installer | systemctl enable dietpi-preboot
+[  OK  ] DietPi-Installer | systemctl enable dietpi-postboot
+[  OK  ] DietPi-Installer | systemctl enable dietpi-kill_ssh
+[  OK  ] DietPi-Installer | Configuring Cron
+[ INFO ] DietPi-Installer | Removing all rfkill soft blocks and the rfkill package
+[ INFO ] DietPi-Installer | APT purge rfkill, please wait...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  rfkill*
+0 upgraded, 0 newly installed, 1 to remove and 3 not upgraded.
+                                                              After this operation, 116 kB disk space will be freed.
+(Reading database ... 16941 files and directories currently installed.)                                             (Reading database ...
+Removing rfkill (2.38.1-5+deb12u3) ...
+[  OK  ] DietPi-Installer | APT purge rfkill
+[  OK  ] DietPi-Installer | rm -R /var/lib/systemd/rfkill
+[ INFO ] DietPi-Installer | Removing all systemd-networkd configs, since DietPi uses ifupdown by default
+[  OK  ] DietPi-Installer | rm -Rf /etc/systemd/network/00-armbian-readme.network /etc/systemd/network/.??* /etc/systemd/network/.[^.]*
+[ INFO ] DietPi-Installer | Avoid "predictable" network interface names
+[  OK  ] DietPi-Installer | ln -sf /dev/null /etc/systemd/network/99-default.link
+[  OK  ] DietPi-Installer | ln -sf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
+[ INFO ] DietPi-Installer | Configuring DNS nameserver:
+[  OK  ] DietPi-Installer | systemctl disable --now systemd-networkd
+[  OK  ] DietPi-Installer | rm -f /etc/resolv.conf
+[  OK  ] DietPi-Installer | eval echo 'nameserver 9.9.9.9' > /etc/resolv.conf
+[  OK  ] DietPi-Installer | systemctl disable wpa_supplicant
+[  OK  ] DietPi-Installer | rm -Rf /etc/network/interfaces /etc/network/interfaces.d/* /etc/network/interfaces.d/.??* /etc/network/interfaces.d/.[^.]*
+[  OK  ] DietPi-Installer | Configuring network interfaces
+[ SUB1 ] DietPi-Set_software > boot_wait_for_network (1)
+[  OK  ] DietPi-Set_software | mkdir -p /etc/systemd/system/dietpi-postboot.service.d
+[  OK  ] DietPi-Set_software | Desired setting in /boot/dietpi.txt was already set: AUTO_SETUP_BOOT_WAIT_FOR_NETWORK=1
+[  OK  ] boot_wait_for_network 1 | Completed
+[ INFO ] DietPi-Installer | Disabling e2scrub services which are for LVM and require lvm2/lvcreate being installed
+[  OK  ] DietPi-Installer | systemctl disable --now e2scrub_all.timer e2scrub_reap
+[ INFO ] DietPi-Installer | Enabling weekly TRIM
+[  OK  ] DietPi-Installer | systemctl enable fstrim.timer
+[  OK  ] DietPi-Installer | eval echo '99' > /etc/.dietpi_hw_model_identifier
+[  OK  ] DietPi-Installer | Generating /boot/dietpi/.hw_model
+[  OK  ] DietPi-Installer | Generating /etc/fstab
+[  OK  ] DietPi-Installer | mkdir -p /tmp/DietPi-Installer
+[  OK  ] DietPi-Installer | cd /tmp/DietPi-Installer
+[ INFO ] DietPi-Installer | Resetting and adding dietpi.com SSH pub host key for DietPi-Survey/Bugreport uploads:
+[  OK  ] DietPi-Installer | mkdir -p /root/.ssh
+[  OK  ] DietPi-Installer | Configuring hostname and hosts
+[      ] DietPi-Installer | eval cat << '_EOF_' > /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 DietPi
+::1 localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+[  OK  ] DietPi-Installer | eval cat << '_EOF_' > /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 DietPi
+::1 localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+_EOF_
+[  OK  ] DietPi-Installer | Configuring htop
+[ INFO ] DietPi-Installer | Configuring serial login consoles
+[ SUB1 ] DietPi-Set_hardware > serialconsole (disable)
+[ INFO ] DietPi-Set_hardware | Disabling serial-getty on: /dev/ttyS0
+[  OK  ] DietPi-Set_hardware | systemctl unmask serial-getty@ttyS0
+[  OK  ] DietPi-Set_hardware | systemctl disable --now serial-getty@ttyS0
+[  OK  ] DietPi-Set_hardware | systemctl mask serial-getty@ttyS0
+[  OK  ] DietPi-Set_hardware | Setting in /boot/armbianEnv.txt adjusted: console=display
+[ INFO ] DietPi-Set_hardware | Disabling serial-getty on: /dev/ttyS2
+[  OK  ] DietPi-Set_hardware | systemctl unmask serial-getty@ttyS2
+[  OK  ] DietPi-Set_hardware | systemctl disable --now serial-getty@ttyS2
+[  OK  ] DietPi-Set_hardware | systemctl mask serial-getty@ttyS2
+[ INFO ] DietPi-Set_hardware | Disabling serial-getty on: /dev/ttyS3
+[  OK  ] DietPi-Set_hardware | systemctl unmask serial-getty@ttyS3
+[  OK  ] DietPi-Set_hardware | systemctl disable --now serial-getty@ttyS3
+[  OK  ] DietPi-Set_hardware | systemctl mask serial-getty@ttyS3
+[ INFO ] DietPi-Set_hardware | Disabling serial-getty on: /dev/ttyS4
+[  OK  ] DietPi-Set_hardware | systemctl unmask serial-getty@ttyS4
+[  OK  ] DietPi-Set_hardware | systemctl disable --now serial-getty@ttyS4
+[  OK  ] DietPi-Set_hardware | systemctl mask serial-getty@ttyS4
+[ INFO ] DietPi-Set_hardware | Disabling serial-getty on: /dev/ttyS5
+[  OK  ] DietPi-Set_hardware | systemctl unmask serial-getty@ttyS5
+[  OK  ] DietPi-Set_hardware | systemctl disable --now serial-getty@ttyS5
+[  OK  ] DietPi-Set_hardware | systemctl mask serial-getty@ttyS5
+[  OK  ] DietPi-Set_hardware | Setting in /boot/dietpi.txt adjusted: CONFIG_SERIAL_CONSOLE_ENABLE=0
+[  OK  ] serialconsole disable | Completed
+[ SUB1 ] DietPi-Set_hardware > serialconsole (enable)
+[  OK  ] DietPi-Set_hardware | Setting in /boot/armbianEnv.txt adjusted: console=both
+[ INFO ] DietPi-Set_hardware | Enabling serial-getty on: /dev/ttyS0
+[  OK  ] DietPi-Set_hardware | systemctl unmask serial-getty@ttyS0
+[  OK  ] DietPi-Set_hardware | systemctl enable serial-getty@ttyS0
+[  OK  ] DietPi-Set_hardware | systemctl start serial-getty@ttyS0
+[  OK  ] serialconsole enable | Completed
+[  OK  ] DietPi-Installer | Setting in /boot/dietpi.txt adjusted: CONFIG_SERIAL_CONSOLE_ENABLE=1
+[ INFO ] DietPi-Installer | Disabling static login prompts on consoles tty2 to tty6:
+[  OK  ] DietPi-Installer | systemctl mask --now getty-static
+[ INFO ] DietPi-Installer | Disabling logind by default, usually not needed on physical server systems
+[  OK  ] DietPi-Installer | systemctl mask --now systemd-logind
+[  OK  ] DietPi-Installer | systemctl enable getty@tty1
+[ INFO ] DietPi-Installer | Configuring locales:
+[ SUB1 ] DietPi-Set_software > locale (C.UTF-8)
+[  OK  ] DietPi-Set_software | eval echo 'C.UTF-8 UTF-8' > /etc/locale.gen
+[  OK  ] DietPi-Set_software | rm -f /etc/default/locale /etc/locale.conf
+[  OK  ] DietPi-Set_software | dpkg-reconfigure -f noninteractive locales
+[  OK  ] DietPi-Set_software | Desired setting in /boot/dietpi.txt was already set: AUTO_SETUP_LOCALE=C.UTF-8
+[  OK  ] locale C.UTF-8 | Completed
+[ INFO ] DietPi-Installer | Configuring time zone:
+[  OK  ] DietPi-Installer | rm -f /etc/localtime /etc/timezone
+[  OK  ] DietPi-Installer | ln -s /usr/share/zoneinfo/UTC /etc/localtime
+[  OK  ] DietPi-Installer | dpkg-reconfigure -f noninteractive tzdata
+[ INFO ] DietPi-Installer | Configuring keyboard:
+[ INFO ] DietPi-Installer | Configuring console:
+[  OK  ] DietPi-Installer | Desired setting in /etc/default/console-setup was already set: CHARMAP="UTF-8"
+[  OK  ] DietPi-Installer | eval debconf-set-selections <<< 'console-setup console-setup/charmap47 select UTF-8'
+[  OK  ] DietPi-Installer | setupcon --save
+[ INFO ] DietPi-Installer | Applying architecture-specific tweaks:
+[  OK  ] DietPi-Installer | Removing foreign armhf DPKG architecture
+[ INFO ] DietPi-Installer | Applying board-specific tweaks:
+[  OK  ] DietPi-Installer | Comment in /etc/hdparm.conf converted to setting: force_spindown_time = 120
+
+ DietPi-Installer
+─────────────────────────────────────────────────────
+ Step: [6] Finalise system for first boot of DietPi
+
+[  OK  ] DietPi-Installer | Configuring hdparm
+[  OK  ] DietPi-Installer | systemctl enable dropbear
+[ INFO ] DietPi-Installer | Configuring services
+[ SUB1 ] DietPi-Services > unmask
+[  OK  ] DietPi-Services | unmask : cron
+[ SUB1 ] DietPi-Services > stop
+[  OK  ] DietPi-Services | stop : cron
+[ SUB1 ] DietPi-Services > enable
+[  OK  ] DietPi-Services | enable : cron
+[  OK  ] DietPi-Installer | systemctl disable cron
+[ INFO ] DietPi-Installer | Removing swapfile from image
+[ SUB1 ] DietPi-Set_swapfile > Applying 0 /var/swap
+[ INFO ] DietPi-Set_swapfile | Disabling and deleting all existing swap files
+[  OK  ] DietPi-Set_swapfile | swapoff -a
+[  OK  ] DietPi-Set_swapfile | Setting in /boot/dietpi.txt adjusted: AUTO_SETUP_SWAPFILE_SIZE=0
+[  OK  ] DietPi-Set_swapfile | Desired setting in /boot/dietpi.txt was already set: AUTO_SETUP_SWAPFILE_LOCATION=/var/swap
+[ INFO ] DietPi-Set_swapfile | Setting /tmp tmpfs size: 992 MiB
+[  OK  ] DietPi-Set_swapfile | Setting in /etc/fstab adjusted: tmpfs /tmp tmpfs size=992M,noatime,lazytime,nodev,nosuid,mode=1777
+[  OK  ] DietPi-Set_swapfile | systemctl daemon-reload
+[  OK  ] DietPi-Set_swapfile | mount -o remount /tmp
+[  OK  ] DietPi-Installer | Setting in /boot/dietpi.txt adjusted: AUTO_SETUP_SWAPFILE_SIZE=1
+[  OK  ] DietPi-Installer | update-alternatives --set regulatory.db /lib/firmware/regulatory.db-upstream
+[ INFO ] DietPi-Installer | Generating default wpa_supplicant.conf
+[  OK  ] DietPi-WiFiDB | mkdir -p /etc/wpa_supplicant
+[  OK  ] DietPi-WiFiDB | eval > /var/lib/dietpi/dietpi-wifi.db
+[ INFO ] DietPi-WiFiDB | Applied WiFi DB slot 0 with SSID ""
+[ INFO ] DietPi-WiFiDB | Applied WiFi DB slot 1 with SSID ""
+[ INFO ] DietPi-WiFiDB | Applied WiFi DB slot 2 with SSID ""
+[ INFO ] DietPi-WiFiDB | Applied WiFi DB slot 3 with SSID ""
+[ INFO ] DietPi-WiFiDB | Applied WiFi DB slot 4 with SSID ""
+[  OK  ] DietPi-WiFiDB | chown root:root /var/lib/dietpi/dietpi-wifi.db /etc/wpa_supplicant/wpa_supplicant.conf
+[  OK  ] DietPi-WiFiDB | chmod 600 /var/lib/dietpi/dietpi-wifi.db /etc/wpa_supplicant/wpa_supplicant.conf
+[  OK  ] DietPi-Installer | mv /var/lib/dietpi/dietpi-wifi.db /boot/dietpi-wifi.txt
+[ INFO ] DietPi-Installer | Disabling Bluetooth by default
+[ SUB1 ] DietPi-Set_hardware > bluetooth (disable)
+[  OK  ] DietPi-Set_hardware | mkdir -p /etc/modprobe.d
+[  OK  ] bluetooth disable | Completed
+[ INFO ] DietPi-Installer | Enabling onboard WiFi modules by default
+[ SUB1 ] DietPi-Set_hardware > wifimodules (onboard_enable)
+[ INFO ] DietPi-Set_hardware | Input value (onboard_enable) is not supported on your system. Nothing has been applied.
+[  OK  ] wifimodules onboard_enable | Completed
+[ INFO ] DietPi-Installer | Enabling generic WiFi by default
+[ SUB1 ] DietPi-Set_hardware > wifimodules (enable)
+[ INFO ] DietPi-Set_hardware | Please wait, enabling WiFi modules...
+[  OK  ] DietPi-Set_hardware | modprobe cfg80211
+[ INFO ] DietPi-Set_hardware | Checking for required APT packages: iw wireless-tools wpasupplicant wireless-regdb
+[  OK  ] wifimodules enable | Completed
+[ INFO ] DietPi-Installer | update-initramfs -u, please wait...
+update-initramfs: Generating /boot/initrd.img-6.1.104-legacy-sunxi64
+update-initramfs: Converting to U-Boot format
+Image Name:   uInitrd
+Created:      Mon Jul 21 08:39:52 2025
+Image Type:   AArch64 Linux RAMDisk Image (gzip compressed)
+Data Size:    11522691 Bytes = 11252.63 KiB = 10.99 MiB
+Load Address: 00000000
+Entry Point:  00000000
+'/boot/uInitrd' -> 'uInitrd-6.1.104-legacy-sunxi64'
+[  OK  ] DietPi-Installer | update-initramfs -u
+[ INFO ] DietPi-Installer | Disabling soundcards by default
+[ SUB1 ] DietPi-Set_hardware > soundcard (none)
+[ INFO ] DietPi-Set_hardware | APT purge alsa-utils libasound2-plugin-equal firmware-intel-sound firmware-sof-signed, please wait...
+[ INFO ] DietPi-Set_hardware | None of the packages are currently installed. Aborting...
+[  OK  ] DietPi-Set_hardware | APT purge alsa-utils libasound2-plugin-equal firmware-intel-sound firmware-sof-signed
+[ INFO ] DietPi-Set_hardware | Resetting all sound card settings...
+[ INFO ] DietPi-Set_hardware | Applying new sound card settings...
+[  OK  ] DietPi-Set_hardware | Desired setting in /boot/dietpi.txt was already set: CONFIG_SOUNDCARD=none
+[  OK  ] soundcard none | Completed
+[ INFO ] DietPi-Installer | Resetting DietPi auto-generated settings and flag files
+removed '/boot/dietpi/.dietpi-services_include_exclude'
+removed '/boot/dietpi/.hw_model'
+removed '/boot/dietpi/.version'
+[  OK  ] DietPi-Installer | cp /var/lib/dietpi/.dietpi_image_version /boot/dietpi/.version
+[ INFO ] DietPi-Installer | Set init .install_stage to -1 (first boot)
+[ INFO ] DietPi-Installer | Writing image info to /boot/dietpi/.prep_info
+[ INFO ] DietPi-Installer | Disabling and clearing APT cache
+[  OK  ] DietPi-Installer | rm /etc/apt/apt.conf.d/98dietpi-installer
+[ SUB1 ] DietPi-Set_software > apt-cache (cache)
+[  OK  ] DietPi-Set_software | apt-get clean
+[  OK  ] DietPi-Set_software | Added setting Dir::Cache "/tmp/apt"; to end of file /etc/apt/apt.conf.d/99-dietpi-cache
+[  OK  ] DietPi-Set_software | Added setting Dir::Cache::archives "/var/cache/apt/archives"; to end of file /etc/apt/apt.conf.d/99-dietpi-cache
+[  OK  ] DietPi-Set_software | Added setting Dir::Cache::pkgcache ""; to end of file /etc/apt/apt.conf.d/99-dietpi-cache
+[  OK  ] DietPi-Set_software | Added setting Dir::Cache::srcpkgcache ""; to end of file /etc/apt/apt.conf.d/99-dietpi-cache
+[  OK  ] DietPi-Set_software | rm -Rf /var/cache/apt
+[  OK  ] DietPi-Set_software | mkdir -p /var/cache/apt/archives
+[  OK  ] apt-cache cache | Completed
+[ SUB1 ] DietPi-Set_software > apt-cache (clean)
+[  OK  ] DietPi-Set_software | apt-get clean
+[  OK  ] DietPi-Set_software | rm -Rf /tmp/apt /var/cache/apt /var/lib/apt/lists /var/lib/apt/mirrors /var/lib/apt/periodic /var/lib/apt/cdroms.list
+[  OK  ] DietPi-Set_software | mkdir -p /var/cache/apt/archives
+[  OK  ] apt-cache clean | Completed
+[  OK  ] DietPi-Installer | Enabling automated partition and file system resize for first boot
+[  OK  ] DietPi-Installer | Enabling first boot installation process
+[ INFO ] DietPi-Installer | Clearing lost+found
+[ INFO ] DietPi-Installer | Clearing DietPi logs, written during install
+removed directory '/var/tmp/dietpi/logs/dietpi-ramlog_store'
+[ INFO ] DietPi-Installer | Clearing items below tmpfs mount points
+[  OK  ] DietPi-Installer | mkdir -p /mnt/tmp_root
+[  OK  ] DietPi-Installer | mount /dev/mmcblk0p1 /mnt/tmp_root
+removed directory '/mnt/tmp_root/run/user'
+removed '/mnt/tmp_root/var/log/README'
+removed '/mnt/tmp_root/var/log/alternatives.log'
+removed '/mnt/tmp_root/var/log/apt/eipp.log.xz'
+removed '/mnt/tmp_root/var/log/apt/history.log'
+removed '/mnt/tmp_root/var/log/apt/term.log'
+removed directory '/mnt/tmp_root/var/log/apt'
+removed '/mnt/tmp_root/var/log/armbian-hardware-monitor.log'
+removed '/mnt/tmp_root/var/log/armbian-ramlog.log'
+removed '/mnt/tmp_root/var/log/auth.log'
+removed '/mnt/tmp_root/var/log/bootstrap.log'
+removed '/mnt/tmp_root/var/log/btmp'
+removed '/mnt/tmp_root/var/log/cron.log'
+removed '/mnt/tmp_root/var/log/dpkg.log'
+removed '/mnt/tmp_root/var/log/faillog'
+removed '/mnt/tmp_root/var/log/journal/7f3d01c802dc4a8d9d61e0ace119d4fa/system.journal'
+removed directory '/mnt/tmp_root/var/log/journal/7f3d01c802dc4a8d9d61e0ace119d4fa'
+removed directory '/mnt/tmp_root/var/log/journal'
+removed '/mnt/tmp_root/var/log/kern.log'
+removed '/mnt/tmp_root/var/log/lastlog'
+removed directory '/mnt/tmp_root/var/log/private'
+removed '/mnt/tmp_root/var/log/syslog'
+removed '/mnt/tmp_root/var/log/wtmp'
+[  OK  ] DietPi-Installer | umount /mnt/tmp_root
+[  OK  ] DietPi-Installer | rmdir /mnt/tmp_root
+[ INFO ] DietPi-Installer | Running general cleanup of misc files
+removed '/etc/group-'
+removed '/etc/gshadow-'
+removed '/etc/passwd-'
+removed '/etc/shadow-'
+removed '/etc/subgid-'
+removed '/etc/subuid-'
+removed '/var/cache/debconf/config.dat-old'
+removed '/var/cache/debconf/templates.dat-old'
+removed '/var/lib/dpkg/diversions-old'
+removed '/var/lib/dpkg/statoverride-old'
+removed '/var/lib/dpkg/status-old'
+[ INFO ] DietPi-Installer | The used kernel version is:
+        - Linux repkapi3 6.1.104-legacy-sunxi64 #17 SMP Sun Aug 11 10:36:02 UTC 2024 aarch64 GNU/Linux
+[ INFO ] DietPi-Installer | The following kernel DEB packages have been found:
+hi  linux-dtb-legacy-sunxi64     25.05.0-trunk                        arm64        Armbian Linux legacy DTBs in /boot/dtb-6.1.104-legacy-sunxi64
+hi  linux-image-legacy-sunxi64   25.05.0-trunk                        arm64        Armbian Linux legacy kernel image 6.1.104-legacy-sunxi64
+[ INFO ] DietPi-Installer | The following kernel images and modules have been found:
+/boot:
+total 52M
+-rw-r--r-- 1 root   root      0 Jul 21 07:44 .next
+lrwxrwxrwx 1 root   root     30 Jul 21 07:44 Image -> vmlinuz-6.1.104-legacy-sunxi64
+-rw-r--r-- 1 root   root   3.4M Jul 21 04:58 System.map-6.1.104-legacy-sunxi64
+-rw-r--r-- 1 master master  252 Jul 21 08:38 armbianEnv.txt
+-rw-r--r-- 1 master master 4.5K Feb 24 08:05 boot.cmd
+-rw-rw-r-- 1 root   root   4.6K Jul 21 07:45 boot.scr
+-rw-r--r-- 1 root   root   211K Jul 21 04:58 config-6.1.104-legacy-sunxi64
+drwxr-xr-x 4 root   root   4.0K Jul 21 08:39 dietpi
+-rw-r--r-- 1 root   root    18K Jul 20 17:59 dietpi-LICENSE.txt
+-rw-r--r-- 1 root   root    16K Jul 20 17:59 dietpi-README.md
+-rw------- 1 root   root   3.9K Jul 21 08:39 dietpi-wifi.txt
+-rw-r--r-- 1 root   root    18K Jul 21 08:39 dietpi.txt
+lrwxrwxrwx 1 root   root     26 Jul 21 07:44 dtb -> dtb-6.1.104-legacy-sunxi64
+drwxr-xr-x 3 root   root   4.0K Jul 21 07:44 dtb-6.1.104-legacy-sunxi64
+-rw-r--r-- 1 root   root    11M Jul 21 08:39 initrd.img-6.1.104-legacy-sunxi64
+lrwxrwxrwx 1 root   root     30 Jul 21 08:39 uInitrd -> uInitrd-6.1.104-legacy-sunxi64
+-rw-r--r-- 1 root   root    11M Jul 21 08:39 uInitrd-6.1.104-legacy-sunxi64
+-rw-r--r-- 1 root   root    27M Jul 21 04:58 vmlinuz-6.1.104-legacy-sunxi64
+
+/lib/modules:
+total 4.0K
+drwxr-xr-x 3 root root 4.0K Jul 21 07:44 6.1.104-legacy-sunxi64
+[  OK  ] DietPi-Installer | Completed, disk can now be saved to .img for later use, or, reboot system to start first run of DietPi.
+[  OK  ] DietPi-Installer | To create an .img file, you can "poweroff" and run the following command from the host/external DietPi system:
+        - bash -c "$(curl -sSf https://raw.githubusercontent.com/MichaIng/DietPi/master/.build/images/dietpi-imager)"
