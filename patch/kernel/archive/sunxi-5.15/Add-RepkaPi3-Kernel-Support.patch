@@ -1,39 +1,213 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: John Doe <john.doe@somewhere.on.planet>
-Date: Fri, 8 Dec 2023 08:33:33 +0000
-Subject: Patching u-boot sunxi64 files arch/arm/dts/Makefile
- arch/arm/dts/sun50i-h5-cpu-opp-1.368ghz.dtsi
- arch/arm/dts/sun50i-h5-repka-3-1.4p.dtsi arch/arm/dts/sun50i-h5-repka-pi3.dts
- configs/Repka_H5_defconfig
+Date: Fri, 8 Dec 2023 09:31:15 +0000
+Subject: Patching kernel sunxi64 files arch/arm64/boot/dts/allwinner/Makefile
+ arch/arm64/boot/dts/allwinner/axp22x.dtsi
+ arch/arm64/boot/dts/allwinner/sun50i-h5-cpu-opp-1.368ghz.dtsi
+ arch/arm64/boot/dts/allwinner/sun50i-h5-repka-3-1.4p.dtsi
+ arch/arm64/boot/dts/allwinner/sun50i-h5-repka-pi3.dts
 
 Signed-off-by: John Doe <john.doe@somewhere.on.planet>
 ---
- arch/arm/dts/Makefile                        |   3 +-
- arch/arm/dts/sun50i-h5-cpu-opp-1.368ghz.dtsi |  73 ++
- arch/arm/dts/sun50i-h5-repka-3-1.4p.dtsi     | 348 ++++++++
- arch/arm/dts/sun50i-h5-repka-pi3.dts         | 425 ++++++++++
- configs/Repka_H5_defconfig                   |  23 +
- 5 files changed, 871 insertions(+), 1 deletion(-)
+ arch/arm64/boot/dts/allwinner/Makefile                        |   1 +
+ arch/arm64/boot/dts/allwinner/axp22x.dtsi                     | 165 ++++
+ arch/arm64/boot/dts/allwinner/sun50i-h5-cpu-opp-1.368ghz.dtsi |  73 ++
+ arch/arm64/boot/dts/allwinner/sun50i-h5-repka-3-1.4p.dtsi     | 348 ++++++++
+ arch/arm64/boot/dts/allwinner/sun50i-h5-repka-pi3.dts         | 421 ++++++++++
+ 5 files changed, 1008 insertions(+)
 
-diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
-index 111111111111..222222222222 100644
---- a/arch/arm/dts/Makefile
-+++ b/arch/arm/dts/Makefile
-@@ -823,7 +823,8 @@ dtb-$(CONFIG_MACH_SUN50I_H5) += \
- 	sun50i-h5-orangepi-zero-plus.dtb \
- 	sun50i-h5-orangepi-pc2.dtb \
- 	sun50i-h5-orangepi-prime.dtb \
--	sun50i-h5-orangepi-zero-plus2.dtb
-+	sun50i-h5-orangepi-zero-plus2.dtb \
-+	sun50i-h5-repka-pi3.dtb
- dtb-$(CONFIG_MACH_SUN50I_H6) += \
- 	sun50i-h6-beelink-gs1.dtb \
- 	sun50i-h6-orangepi-3.dtb \
-diff --git a/arch/arm/dts/sun50i-h5-cpu-opp-1.368ghz.dtsi b/arch/arm/dts/sun50i-h5-cpu-opp-1.368ghz.dtsi
+diff --git a/arch/arm64/boot/dts/allwinner/Makefile b/arch/arm64/boot/dts/allwinner/Makefile
+index a9072b4d231e..904c04075ffc 100644
+--- a/arch/arm64/boot/dts/allwinner/Makefile
++++ b/arch/arm64/boot/dts/allwinner/Makefile
+@@ -42,10 +42,11 @@ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-orangepi-pc2.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-nanopi-k1-plus.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-nanopi-m1-plus2.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-orangepi-prime.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-orangepi-zero-plus.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-orangepi-zero-plus2.dtb
++dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-repka-pi3.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h6-beelink-gs1.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h6-orangepi-3.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h6-orangepi-3-lts.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h6-orangepi-lite2.dtb
+ dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h6-orangepi-one-plus.dtb
+diff --git a/arch/arm64/boot/dts/allwinner/axp22x.dtsi b/arch/arm64/boot/dts/allwinner/axp22x.dtsi
 new file mode 100644
-index 000000000000..111111111111
+index 000000000000..87fb08e812ec
 --- /dev/null
-+++ b/arch/arm/dts/sun50i-h5-cpu-opp-1.368ghz.dtsi
++++ b/arch/arm64/boot/dts/allwinner/axp22x.dtsi
+@@ -0,0 +1,165 @@
++/*
++ * Copyright 2015 Chen-Yu Tsai
++ *
++ * Chen-Yu Tsai <wens@csie.org>
++ *
++ * This file is dual-licensed: you can use it either under the terms
++ * of the GPL or the X11 license, at your option. Note that this dual
++ * licensing only applies to this file, and not this project as a
++ * whole.
++ *
++ *  a) This file is free software; you can redistribute it and/or
++ *     modify it under the terms of the GNU General Public License as
++ *     published by the Free Software Foundation; either version 2 of the
++ *     License, or (at your option) any later version.
++ *
++ *     This file is distributed in the hope that it will be useful,
++ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *     GNU General Public License for more details.
++ *
++ * Or, alternatively,
++ *
++ *  b) Permission is hereby granted, free of charge, to any person
++ *     obtaining a copy of this software and associated documentation
++ *     files (the "Software"), to deal in the Software without
++ *     restriction, including without limitation the rights to use,
++ *     copy, modify, merge, publish, distribute, sublicense, and/or
++ *     sell copies of the Software, and to permit persons to whom the
++ *     Software is furnished to do so, subject to the following
++ *     conditions:
++ *
++ *     The above copyright notice and this permission notice shall be
++ *     included in all copies or substantial portions of the Software.
++ *
++ *     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
++ *     EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
++ *     OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
++ *     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
++ *     HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
++ *     WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
++ *     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
++ *     OTHER DEALINGS IN THE SOFTWARE.
++ */
++
++/*
++ * AXP221/221s/223 Integrated Power Management Chip
++ * http://www.x-powers.com/product/AXP22X.php
++ * http://dl.linux-sunxi.org/AXP/AXP221%20Datasheet%20V1.2%2020130326%20.pdf
++ */
++
++&axp22x {
++	interrupt-controller;
++	#interrupt-cells = <1>;
++
++	ac_power_supply: ac-power-supply {
++		compatible = "x-powers,axp221-ac-power-supply";
++		status = "disabled";
++	};
++
++	battery_power_supply: battery-power-supply {
++		compatible = "x-powers,axp221-battery-power-supply";
++		status = "disabled";
++	};
++
++	regulators {
++		/* Default work frequency for buck regulators */
++		x-powers,dcdc-freq = <3000>;
++
++		reg_dcdc1: dcdc1 {
++			regulator-name = "dcdc1";
++		};
++
++		reg_dcdc2: dcdc2 {
++			regulator-name = "dcdc2";
++		};
++
++		reg_dcdc3: dcdc3 {
++			regulator-name = "dcdc3";
++		};
++
++		reg_dcdc4: dcdc4 {
++			regulator-name = "dcdc4";
++		};
++
++		reg_dcdc5: dcdc5 {
++			regulator-name = "dcdc5";
++		};
++
++		reg_dc1sw: dc1sw {
++			regulator-name = "dc1sw";
++		};
++
++		reg_dc5ldo: dc5ldo {
++			regulator-name = "dc5ldo";
++		};
++
++		reg_aldo1: aldo1 {
++			regulator-name = "aldo1";
++		};
++
++		reg_aldo2: aldo2 {
++			regulator-name = "aldo2";
++		};
++
++		reg_aldo3: aldo3 {
++			regulator-name = "aldo3";
++		};
++
++		reg_dldo1: dldo1 {
++			regulator-name = "dldo1";
++		};
++
++		reg_dldo2: dldo2 {
++			regulator-name = "dldo2";
++		};
++
++		reg_dldo3: dldo3 {
++			regulator-name = "dldo3";
++		};
++
++		reg_dldo4: dldo4 {
++			regulator-name = "dldo4";
++		};
++
++		reg_eldo1: eldo1 {
++			regulator-name = "eldo1";
++		};
++
++		reg_eldo2: eldo2 {
++			regulator-name = "eldo2";
++		};
++
++		reg_eldo3: eldo3 {
++			regulator-name = "eldo3";
++		};
++
++		reg_ldo_io0: ldo_io0 {
++			regulator-name = "ldo_io0";
++			status = "disabled";
++		};
++
++		reg_ldo_io1: ldo_io1 {
++			regulator-name = "ldo_io1";
++			status = "disabled";
++		};
++
++		reg_rtc_ldo: rtc_ldo {
++			/* RTC_LDO is a fixed, always-on regulator */
++			regulator-always-on;
++			regulator-min-microvolt = <3000000>;
++			regulator-max-microvolt = <3000000>;
++			regulator-name = "rtc_ldo";
++		};
++
++		reg_drivevbus: drivevbus {
++			regulator-name = "drivevbus";
++			status = "disabled";
++		};
++	};
++
++	usb_power_supply: usb_power_supply {
++		compatible = "x-powers,axp221-usb-power-supply";
++		status = "disabled";
++	};
++};
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-h5-cpu-opp-1.368ghz.dtsi b/arch/arm64/boot/dts/allwinner/sun50i-h5-cpu-opp-1.368ghz.dtsi
+new file mode 100644
+index 000000000000..bd55befb2321
+--- /dev/null
++++ b/arch/arm64/boot/dts/allwinner/sun50i-h5-cpu-opp-1.368ghz.dtsi
 @@ -0,0 +1,73 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +// Copyright (C) 2020 Chen-Yu Tsai <wens@csie.org>
@@ -108,16 +282,16 @@ index 000000000000..111111111111
 +&cpu3 {
 +	operating-points-v2 = <&cpu_opp_table>;
 +};
-diff --git a/arch/arm/dts/sun50i-h5-repka-3-1.4p.dtsi b/arch/arm/dts/sun50i-h5-repka-3-1.4p.dtsi
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-h5-repka-3-1.4p.dtsi b/arch/arm64/boot/dts/allwinner/sun50i-h5-repka-3-1.4p.dtsi
 new file mode 100644
-index 000000000000..111111111111
+index 000000000000..b033cad0447b
 --- /dev/null
-+++ b/arch/arm/dts/sun50i-h5-repka-3-1.4p.dtsi
++++ b/arch/arm64/boot/dts/allwinner/sun50i-h5-repka-3-1.4p.dtsi
 @@ -0,0 +1,348 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +// Copyright (C) 2016 ARM Ltd.
 +
-+#include <sunxi-h3-h5.dtsi>
++#include "sunxi-h3-h5.dtsi"
 +
 +#include <dt-bindings/thermal/thermal.h>
 +
@@ -303,7 +477,7 @@ index 000000000000..111111111111
 +		};
 +
 +		ths: thermal-sensor@1c25000 {
-+			compatible = "allwinner,sun8i-h3-ths"; 
++			compatible = "allwinner,sun50i-h5-ths"; 
 +			reg = <0x01c25000 0x400>;
 +			interrupts = <GIC_SPI 31 IRQ_TYPE_LEVEL_HIGH>;
 +			resets = <&ccu RST_BUS_THS>;
@@ -462,12 +636,12 @@ index 000000000000..111111111111
 +&sid {
 +	compatible = "allwinner,sun50i-h5-sid";
 +};
-diff --git a/arch/arm/dts/sun50i-h5-repka-pi3.dts b/arch/arm/dts/sun50i-h5-repka-pi3.dts
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-h5-repka-pi3.dts b/arch/arm64/boot/dts/allwinner/sun50i-h5-repka-pi3.dts
 new file mode 100644
-index 000000000000..111111111111
+index 000000000000..cb43bb8bb969
 --- /dev/null
-+++ b/arch/arm/dts/sun50i-h5-repka-pi3.dts
-@@ -0,0 +1,425 @@
++++ b/arch/arm64/boot/dts/allwinner/sun50i-h5-repka-pi3.dts
+@@ -0,0 +1,421 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +// Copyright (C) 2016 ARM Ltd.
 +
@@ -604,10 +778,6 @@ index 000000000000..111111111111
 +&i2s2 {
 +	status = "okay";
 +};
-+
-+
-+
-+
 +
 +&ir {
 +	pinctrl-names = "default";
@@ -893,35 +1063,6 @@ index 000000000000..111111111111
 +};
 +
 +
-diff --git a/configs/Repka_H5_defconfig b/configs/Repka_H5_defconfig
-new file mode 100644
-index 000000000000..111111111111
---- /dev/null
-+++ b/configs/Repka_H5_defconfig
-@@ -0,0 +1,23 @@
-+CONFIG_ARM=y
-+CONFIG_ARCH_SUNXI=y
-+CONFIG_DEFAULT_DEVICE_TREE="sun50i-h5-repka-pi3"
-+CONFIG_SPL=y
-+CONFIG_MACH_SUN50I_H5=y
-+CONFIG_DRAM_CLK=672
-+#CONFIG_DRAM_CLK=696
-+CONFIG_DRAM_ZQ=3881977
-+CONFIG_SYS_CLK_FREQ=312000000
-+# CONFIG_DRAM_ODT_EN is not set
-+CONFIG_SPL_SPI_SUNXI=y
-+# CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
-+CONFIG_SPL_I2C=y
-+# CONFIG_SPL_SYS_I2C_LEGACY=y
-+CONFIG_SYS_I2C_MVTWSI=y
-+CONFIG_SYS_I2C_SLAVE=0x7f
-+CONFIG_SYS_I2C_SPEED=400000
-+CONFIG_SUN8I_EMAC=y
-+CONFIG_USB_EHCI_HCD=y
-+CONFIG_USB_OHCI_HCD=y
-+# CONFIG_USB_MUSB_GADGET=y
-+CONFIG_CMD_POWEROFF=y
-+CONFIG_SYSRESET_CMD_POWEROFF=y
 -- 
-Armbian
+Created with Armbian build tools https://github.com/armbian/build
 
