@@ -20,13 +20,17 @@ git clone https://github.com/non3via/armbian-build.git && cd ./armbian-build
 ./compile.sh build BOARD=repkapi3 BRANCH=legacy BUILD_DESKTOP=no BUILD_MINIMAL=yes KERNEL_CONFIGURE=yes RELEASE=bookworm NAMESERVER=9.9.9.9
 ```
 
+Примеры журналов сборки: [тут](.repkapi/logs/log-build-example.log), [тут](.repkapi/logs/log-build-example.log.ans), [тут](.repkapi/logs/log-docker-example.log.ans), [тут](.repkapi/logs/summary-build-example.md) и [тут](.repkapi/logs/summary-docker-example.md)
+
 ## Залить образ на флэш-карту, запустить, настроить сеть, зайти под root
 
 ```bash
 sudo dd if=output/images/RepkaPi_25.05.0-trunk_Repkapi3_bookworm_legacy_6.1.104_minimal.img of=/dev/mmcblk0 bs=1M status=progress iflag=direct oflag=direct
 ```
 
-## Установить DietPi
+![screenshot](.repkapi/armbian-first-run.png)
+
+## Можно остаться на Armbian:) или пойти дальше и установить DietPi
 
 ```bash
 bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/non3via/DietPi/repkapi3-armbian/.build/images/dietpi-installer')"
@@ -38,6 +42,6 @@ bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/non3via/DietPi/repkapi3
 reboot
 ```
 
-## Результат успешной настройки
+## Результат успешной настройки DietPi
 
 ![screenshot](.repkapi/dietpi-first-run.png)

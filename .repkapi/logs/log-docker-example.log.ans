@@ -1,0 +1,288 @@
+# Armbian ANSI build logs for 35dcd83d-82ed-4ce3-b5fa-464a9d08daf4 - use "less -SR" to view
+[1;34m# Armbian build at Mon Jul 21 07:46:13 UTC 2025 on DESKTOP[0m
+[1;30m------------------------------------------------------------------------------------------------------------[0m
+[1;34m# Repeat build: ./compile.sh build BOARD=repkapi3 BRANCH=legacy BUILD_DESKTOP=no BUILD_MINIMAL=yes KERNEL_CONFIGURE=yes NAMESERVER=9.9.9.9 RELEASE=bookworm[0m
+[1;34m# ARGs: 'build' 'BOARD=repkapi3' 'BRANCH=legacy' 'BUILD_DESKTOP=no' 'BUILD_MINIMAL=yes' 'KERNEL_CONFIGURE=yes' 'RELEASE=bookworm' 'NAMESERVER=9.9.9.9'[0m
+[1;30m------------------------------------------------------------------------------------------------------------[0m
+[1;34m# GIT revision[0m
+   [33mcommit 4a76d8a87bc28856ed03874e2fb2145bd705b62f[m[33m ([m[1;36mHEAD -> [m[1;32mrepkapi3[m[33m, [m[1;31morigin/repkapi3[m[33m)[m
+   Author: non3via <non3via@outlook.com>
+
+       rebased & moved from userpatches
+
+[1;34m# GIT status[0m
+   On branch repkapi3
+   Your branch is up to date with 'origin/repkapi3'.
+
+   nothing to commit, working tree clean
+[1;34m### docker_cli_prepare.log [0m
+--> (3) [1;32mINFO[0m: Using prebuilt Armbian image as base for 'ubuntu-jammy' [ [1;32mDOCKER_ARMBIAN_BASE_IMAGE: ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest[0m ]
+--> (3) [1;39mSYSINFO[0m: Docker info [ [1;39mDocker 28.0.1 Kernel:5.15.167.4-microsoft-standard-WSL2 RAM:29.38GiB CPUs:10 OS:'Docker Desktop' hostname 'docker-desktop' under 'Linux' - buildx:yes - loop-hacks:yes static-loops:no[0m ]
+[1;30m------------------------------------------------------------------------------------------------------------[0m
+[1;34m### docker_cli_prepare_dockerfile.log [0m
+--> (3) [1;32mINFO[0m: Creating [ [1;32m.dockerignore[0m ]
+--> (3) [1;32mINFO[0m: Docker launcher [ [1;32menabling all extensions looking for Docker dependencies[0m ]
+--> (5) [1;32mINFO[0m: Extension manager [ [1;32mprocessed 34 Extension Methods calls and 139 Extension Method implementations[0m ]
+--> (5) [1;32mINFO[0m: Extension: fs-cryptroot-support: Adding packages to host dependencies [ [1;32mcryptsetup openssh-client[0m ]
+--> (5) [1;32mINFO[0m: Preparing rkdevflash host-side dependencies [ [1;32mrkdevflash[0m ]
+--> (5) [1;32mINFO[0m: Creating [ [1;32mDockerfile; FROM ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest[0m ]
+[1;30m------------------------------------------------------------------------------------------------------------[0m
+[1;34m### docker_cli_build_dockerfile.log [0m
+--> (5) [0;36mCOMMAND[0m: mkdir -p /home/master/repos-old/armbian-build/cache/docker
+--> (5) [1;32mINFO[0m: More than [ [1;32m12 hours since last pull, pulling again[0m ]
+--> (5) [1;32mINFO[0m: Pulling [ [1;32mghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest[0m ]
+--> (5) [0;36mCOMMAND[0m: docker pull ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest
+   [0m[0marmbian-ubuntu-jammy-latest: Pulling from armbian/docker-armbian-build
+   [0m[0mfe8771717032: Pulling fs layer
+   [0m[0m208df8009221: Pulling fs layer
+   [0m[0m8b18dbe59576: Pulling fs layer
+   [0m[0md22a2a968f43: Pulling fs layer
+   [0m[0mdde530746217: Pulling fs layer
+   [0m[0mdea7214d21ef: Pulling fs layer
+   [0m[0mdea7214d21ef: Download complete
+   [0m[0mfe8771717032: Download complete
+   [0m[0m208df8009221: Download complete
+   [0m[0mdde530746217: Download complete
+   [0m[0md22a2a968f43: Download complete
+   [0m[0m8b18dbe59576: Download complete
+   [0m[0m8b18dbe59576: Pull complete
+   [0m[0mdea7214d21ef: Pull complete
+   [0m[0mdde530746217: Pull complete
+   [0m[0mfe8771717032: Pull complete
+   [0m[0m208df8009221: Pull complete
+   [0m[0md22a2a968f43: Pull complete
+   [0m[0mDigest: sha256:f49e4ea6108834728b5e9a9cd4edb0bcb60269cd7a1076375efdf9150ada22f5
+   [0m[0mStatus: Downloaded newer image for ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest
+   [0m[0mghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest
+--> (125) [1;32mINFO[0m: Building [ [1;32mDockerfile via 'buildx build --progress=plain --load'[0m ]
+--> (125) [0;36mCOMMAND[0m: docker buildx build --progress=plain --load -t armbian.local.only/armbian-build:initial -f /home/master/repos-old/armbian-build/Dockerfile /home/master/repos-old/armbian-build
+   [0m[0m#0 building with "default" instance using docker driver
+   [0m[0m
+   [0m[0m#1 [internal] load build definition from Dockerfile
+   [0m[0m#1 transferring dockerfile: 2.13kB done
+   [0m[0m#1 DONE 0.0s
+   [0m[0m
+   [0m[0m#2 [internal] load metadata for ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest
+   [0m[0m#2 DONE 0.1s
+   [0m[0m
+   [0m[0m#3 [internal] load .dockerignore
+   [0m[0m#3 transferring context: 441B done
+   [0m[0m#3 DONE 0.0s
+   [0m[0m
+   [0m[0m#4 [internal] load build context
+   [0m[0m#4 transferring context: 20.07kB 0.0s done
+   [0m[0m#4 DONE 0.0s
+   [0m[0m
+   [0m[0m#5 [1/6] FROM ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest@sha256:f49e4ea6108834728b5e9a9cd4edb0bcb60269cd7a1076375efdf9150ada22f5
+   [0m[0m#5 resolve ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest@sha256:f49e4ea6108834728b5e9a9cd4edb0bcb60269cd7a1076375efdf9150ada22f5
+   [0m[0m#5 resolve ghcr.io/armbian/docker-armbian-build:armbian-ubuntu-jammy-latest@sha256:f49e4ea6108834728b5e9a9cd4edb0bcb60269cd7a1076375efdf9150ada22f5 1.3s done
+   [0m[0m#5 DONE 1.5s
+   [0m[0m
+   [0m[0m#6 [2/6] RUN echo "--> CACHE MISS IN DOCKERFILE: apt packages." &&  DEBIAN_FRONTEND=noninteractive apt-get -y update &&  DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends bash git psmisc uuid-runtime bc binfmt-support bison libc6-dev make dpkg-dev gcc ca-certificates ccache cpio device-tree-compiler dialog dirmngr dosfstools dwarves flex gawk gnupg gpg imagemagick jq kmod libbison-dev libelf-dev libfdt-dev libfile-fcntllock-perl libmpc-dev libfl-dev lz4 libncurses-dev libssl-dev libusb-1.0-0-dev linux-base locales lsof ncurses-base ncurses-term ntpdate patchutils pkg-config pv qemu-user-static arch-test rsync swig u-boot-tools udev uuid-dev zlib1g-dev file tree expect colorized-logs unzip zip pigz xz-utils pbzip2 lzop zstd parted gdisk fdisk aria2 curl wget axel parallel rdfind python3 libpython3-dev libffi-dev libgnutls28-dev python2 python2-dev gcc-x86-64-linux-gnu gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi gcc-riscv64-linux-gnu debian-archive-keyring libc6-amd64-cross mkbootimg g++-aarch64-linux-gnu g++ btrfs-progs cryptsetup openssh-client f2fs-tools nilfs-tools xfsprogs zerofree lvm2 qemu-utils qemu-utils libudev-dev libusb-1.0-0-dev dh-autoreconf build-essential gcc-arm-linux-gnueabi gcc-or1k-elf qemu-utils qemu-utils
+   [0m[0m#6 0.439 --> CACHE MISS IN DOCKERFILE: apt packages.
+   [0m[0m#6 1.267 Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+   [0m[0m#6 1.880 Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+   [0m[0m#6 2.234 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+   [0m[0m#6 3.242 Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+   [0m[0m#6 3.336 Fetched 384 kB in 3s (137 kB/s)
+   [0m[0m#6 3.336 Reading package lists...
+   [0m[0m#6 4.372 Reading package lists...
+   [0m[0m#6 5.278 Building dependency tree...
+   [0m[0m#6 5.541 Reading state information...
+   [0m[0m#6 5.566 bc is already the newest version (1.07.1-3build1).
+   [0m[0m#6 5.566 binfmt-support is already the newest version (2.2.1-2).
+   [0m[0m#6 5.566 bison is already the newest version (2:3.8.2+dfsg-1build1).
+   [0m[0m#6 5.566 btrfs-progs is already the newest version (5.16.2-1).
+   [0m[0m#6 5.566 build-essential is already the newest version (12.9ubuntu3).
+   [0m[0m#6 5.566 device-tree-compiler is already the newest version (1.6.1-1).
+   [0m[0m#6 5.566 dh-autoreconf is already the newest version (20).
+   [0m[0m#6 5.566 dosfstools is already the newest version (4.2-1build3).
+   [0m[0m#6 5.566 flex is already the newest version (2.6.4-8build2).
+   [0m[0m#6 5.566 g++ is already the newest version (4:11.2.0-1ubuntu1).
+   [0m[0m#6 5.566 g++-aarch64-linux-gnu is already the newest version (4:11.2.0-1ubuntu1).
+   [0m[0m#6 5.566 gcc is already the newest version (4:11.2.0-1ubuntu1).
+   [0m[0m#6 5.566 gcc-aarch64-linux-gnu is already the newest version (4:11.2.0-1ubuntu1).
+   [0m[0m#6 5.566 gcc-arm-linux-gnueabihf is already the newest version (4:11.2.0-1ubuntu1).
+   [0m[0m#6 5.566 gdisk is already the newest version (1.0.8-4build1).
+   [0m[0m#6 5.566 jq is already the newest version (1.6-2.1ubuntu3).
+   [0m[0m#6 5.566 kmod is already the newest version (29-1ubuntu1).
+   [0m[0m#6 5.566 libbison-dev is already the newest version (2:3.8.2+dfsg-1build1).
+   [0m[0m#6 5.566 libfdt-dev is already the newest version (1.6.1-1).
+   [0m[0m#6 5.566 libffi-dev is already the newest version (3.4.2-4).
+   [0m[0m#6 5.566 libfile-fcntllock-perl is already the newest version (0.22-3build7).
+   [0m[0m#6 5.566 libfl-dev is already the newest version (2.6.4-8build2).
+   [0m[0m#6 5.566 libmpc-dev is already the newest version (1.2.1-2build1).
+   [0m[0m#6 5.566 lsof is already the newest version (4.93.2+dfsg-1.1build2).
+   [0m[0m#6 5.566 lz4 is already the newest version (1.9.3-2build2).
+   [0m[0m#6 5.566 lzop is already the newest version (1.04-2build2).
+   [0m[0m#6 5.566 make is already the newest version (4.3-4.1build1).
+   [0m[0m#6 5.566 parted is already the newest version (3.4-2build1).
+   [0m[0m#6 5.566 patchutils is already the newest version (0.4.2-1build2).
+   [0m[0m#6 5.566 pkg-config is already the newest version (0.29.2-1ubuntu3).
+   [0m[0m#6 5.566 psmisc is already the newest version (23.4-2build3).
+   [0m[0m#6 5.566 pv is already the newest version (1.6.6-1build2).
+   [0m[0m#6 5.566 xz-utils is already the newest version (5.2.5-2ubuntu1).
+   [0m[0m#6 5.566 zerofree is already the newest version (1.1.1-1build3).
+   [0m[0m#6 5.566 zip is already the newest version (3.0-12build2).
+   [0m[0m#6 5.566 zstd is already the newest version (1.4.8+dfsg-3build1).
+   [0m[0m#6 5.566 arch-test is already the newest version (0.17-2).
+   [0m[0m#6 5.566 aria2 is already the newest version (1.36.0-1).
+   [0m[0m#6 5.566 axel is already the newest version (2.17.11-1).
+   [0m[0m#6 5.566 ccache is already the newest version (4.5.1-1).
+   [0m[0m#6 5.566 colorized-logs is already the newest version (2.6-1).
+   [0m[0m#6 5.566 debian-archive-keyring is already the newest version (2021.1.1ubuntu2).
+   [0m[0m#6 5.566 dialog is already the newest version (1.3-20211214-1).
+   [0m[0m#6 5.566 expect is already the newest version (5.45.4-2build1).
+   [0m[0m#6 5.566 f2fs-tools is already the newest version (1.14.0-2build1).
+   [0m[0m#6 5.566 gcc-arm-linux-gnueabi is already the newest version (4:11.2.0-1ubuntu1).
+   [0m[0m#6 5.566 gcc-or1k-elf is already the newest version (11.2.0-13ubuntu1+1.0.1).
+   [0m[0m#6 5.566 gcc-riscv64-linux-gnu is already the newest version (4:11.2.0--1ubuntu1).
+   [0m[0m#6 5.566 libc6-amd64-cross is already the newest version (2.35-0ubuntu1cross3).
+   [0m[0m#6 5.566 mkbootimg is already the newest version (1:10.0.0+r36-9).
+   [0m[0m#6 5.566 nilfs-tools is already the newest version (2.2.8-1).
+   [0m[0m#6 5.566 parallel is already the newest version (20210822+ds-2).
+   [0m[0m#6 5.566 pbzip2 is already the newest version (1.1.13-1build1).
+   [0m[0m#6 5.566 pigz is already the newest version (2.6-1).
+   [0m[0m#6 5.566 python2 is already the newest version (2.7.18-3).
+   [0m[0m#6 5.566 python2-dev is already the newest version (2.7.18-3).
+   [0m[0m#6 5.566 rdfind is already the newest version (1.5.0-1.1).
+   [0m[0m#6 5.566 swig is already the newest version (4.0.2-1ubuntu1).
+   [0m[0m#6 5.566 tree is already the newest version (2.0.2-1).
+   [0m[0m#6 5.566 bash is already the newest version (5.1-6ubuntu1.1).
+   [0m[0m#6 5.566 ca-certificates is already the newest version (20240203~22.04.1).
+   [0m[0m#6 5.566 cpio is already the newest version (2.13+dfsg-7ubuntu0.1).
+   [0m[0m#6 5.566 cryptsetup is already the newest version (2:2.4.3-1ubuntu1.3).
+   [0m[0m#6 5.566 curl is already the newest version (7.81.0-1ubuntu1.20).
+   [0m[0m#6 5.566 dirmngr is already the newest version (2.2.27-3ubuntu2.4).
+   [0m[0m#6 5.566 dpkg-dev is already the newest version (1.21.1ubuntu2.3).
+   [0m[0m#6 5.566 fdisk is already the newest version (2.37.2-4ubuntu3.4).
+   [0m[0m#6 5.566 file is already the newest version (1:5.41-3ubuntu0.1).
+   [0m[0m#6 5.566 gawk is already the newest version (1:5.1.0-1ubuntu0.1).
+   [0m[0m#6 5.566 git is already the newest version (1:2.34.1-1ubuntu1.15).
+   [0m[0m#6 5.566 gnupg is already the newest version (2.2.27-3ubuntu2.4).
+   [0m[0m#6 5.566 gpg is already the newest version (2.2.27-3ubuntu2.4).
+   [0m[0m#6 5.847 libc6-dev is already the newest version (2.35-0ubuntu3.10).
+   [0m[0m#6 5.847 libelf-dev is already the newest version (0.186-1ubuntu0.1).
+   [0m[0m#6 5.847 libgnutls28-dev is already the newest version (3.7.3-4ubuntu1.7).
+   [0m[0m#6 5.847 libncurses-dev is already the newest version (6.3-2ubuntu0.1).
+   [0m[0m#6 5.847 libpython3-dev is already the newest version (3.10.6-1~22.04.1).
+   [0m[0m#6 5.847 libssl-dev is already the newest version (3.0.2-0ubuntu1.19).
+   [0m[0m#6 5.847 libudev-dev is already the newest version (249.11-0ubuntu3.16).
+   [0m[0m#6 5.847 libusb-1.0-0-dev is already the newest version (2:1.0.25-1ubuntu2).
+   [0m[0m#6 5.847 linux-base is already the newest version (4.5ubuntu9+22.04.1).
+   [0m[0m#6 5.847 locales is already the newest version (2.35-0ubuntu3.10).
+   [0m[0m#6 5.847 lvm2 is already the newest version (2.03.11-2.1ubuntu5).
+   [0m[0m#6 5.847 ncurses-base is already the newest version (6.3-2ubuntu0.1).
+   [0m[0m#6 5.847 ncurses-term is already the newest version (6.3-2ubuntu0.1).
+   [0m[0m#6 5.847 openssh-client is already the newest version (1:8.9p1-3ubuntu0.13).
+   [0m[0m#6 5.847 python3 is already the newest version (3.10.6-1~22.04.1).
+   [0m[0m#6 5.847 qemu-utils is already the newest version (1:6.2+dfsg-2ubuntu6.26).
+   [0m[0m#6 5.847 rsync is already the newest version (3.2.7-0ubuntu0.22.04.4).
+   [0m[0m#6 5.847 u-boot-tools is already the newest version (2022.01+dfsg-2ubuntu2.6).
+   [0m[0m#6 5.847 udev is already the newest version (249.11-0ubuntu3.16).
+   [0m[0m#6 5.847 unzip is already the newest version (6.0-26ubuntu3.2).
+   [0m[0m#6 5.847 uuid-dev is already the newest version (2.37.2-4ubuntu3.4).
+   [0m[0m#6 5.847 uuid-runtime is already the newest version (2.37.2-4ubuntu3.4).
+   [0m[0m#6 5.847 wget is already the newest version (1.21.2-2ubuntu1.1).
+   [0m[0m#6 5.847 xfsprogs is already the newest version (5.13.0-1ubuntu2.1).
+   [0m[0m#6 5.847 zlib1g-dev is already the newest version (1:1.2.11.dfsg-2ubuntu9.2).
+   [0m[0m#6 5.847 dwarves is already the newest version (1.25-0ubuntu1~22.04.2).
+   [0m[0m#6 5.847 imagemagick is already the newest version (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5).
+   [0m[0m#6 5.847 qemu-user-static is already the newest version (1:6.2+dfsg-2ubuntu6.26).
+   [0m[0m#6 5.847 The following package was automatically installed and is no longer required:
+   [0m[0m#6 5.848   python3-ntp
+   [0m[0m#6 5.848 Use 'apt autoremove' to remove it.
+   [0m[0m#6 5.890 The following packages will be REMOVED:
+   [0m[0m#6 5.890   ntpsec-ntpdate
+   [0m[0m#6 5.892 The following NEW packages will be installed:
+   [0m[0m#6 5.893   ntpdate
+   [0m[0m#6 5.942 0 upgraded, 1 newly installed, 1 to remove and 0 not upgraded.
+   [0m[0m#6 5.942 Need to get 51.5 kB of archives.
+   [0m[0m#6 5.942 After this operation, 59.4 kB of additional disk space will be used.
+   [0m[0m#6 5.942 Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 ntpdate amd64 1:4.2.8p15+dfsg-1ubuntu2 [51.5 kB]
+   [0m[0m#6 6.115 debconf: delaying package configuration, since apt-utils is not installed
+   [0m[0m#6 6.187 Fetched 51.5 kB in 0s (1419 kB/s)
+   [0m[0m#6 6.208 (Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 29497 files and directories currently installed.)
+   [0m[0m#6 6.252 Removing ntpsec-ntpdate (1.2.1+dfsg1-4) ...
+   [0m[0m#6 6.372 Selecting previously unselected package ntpdate.
+   [0m[0m#6 6.372 (Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 29486 files and directories currently installed.)
+   [0m[0m#6 6.388 Preparing to unpack .../ntpdate_1%3a4.2.8p15+dfsg-1ubuntu2_amd64.deb ...
+   [0m[0m#6 6.402 Unpacking ntpdate (1:4.2.8p15+dfsg-1ubuntu2) ...
+   [0m[0m#6 6.465 Setting up ntpdate (1:4.2.8p15+dfsg-1ubuntu2) ...
+   [0m[0m#6 DONE 7.6s
+   [0m[0m
+   [0m[0m#7 [3/6] RUN sed -i 's/# en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen
+   [0m[0m#7 DONE 0.4s
+   [0m[0m
+   [0m[0m#8 [4/6] RUN locale-gen
+   [0m[0m#8 0.507 Generating locales (this might take a while)...
+   [0m[0m#8 0.521   en_US.UTF-8... done
+   [0m[0m#8 2.134 Generation complete.
+   [0m[0m#8 DONE 2.2s
+   [0m[0m
+   [0m[0m#9 [5/6] WORKDIR /armbian
+   [0m[0m#9 DONE 0.1s
+   [0m[0m
+   [0m[0m#10 [6/6] ADD . /armbian/
+   [0m[0m#10 DONE 0.2s
+   [0m[0m
+   [0m[0m#11 exporting to image
+   [0m[0m#11 exporting layers
+   [0m[0m#11 exporting layers 0.6s done
+   [0m[0m#11 exporting manifest sha256:1e8ddc3b850cc2e3b960896ecab61041443aa4b5c2f943d53a24ad57472575fb 0.0s done
+   [0m[0m#11 exporting config sha256:857538465f1863d9b4d9d83f8ca600ebfa4103b1beab0cdd04fbd4cf17b3c274 0.0s done
+   [0m[0m#11 exporting attestation manifest sha256:6d3d132963a0fad5be26e499d85913b072a32c5dd270612a10a64b9f5f42d806 0.0s done
+   [0m[0m#11 exporting manifest list sha256:b7b0c2b22dde7839c8042c86e0035772fc79b5185fc5be32bdedd0837bed9c1d
+   [0m[0m#11 exporting manifest list sha256:b7b0c2b22dde7839c8042c86e0035772fc79b5185fc5be32bdedd0837bed9c1d 0.0s done
+   [0m[0m#11 naming to armbian.local.only/armbian-build:initial done
+   [0m[0m#11 unpacking to armbian.local.only/armbian-build:initial
+   [0m[0m#11 unpacking to armbian.local.only/armbian-build:initial 0.3s done
+   [0m[0m#11 DONE 1.0s
+[1;30m------------------------------------------------------------------------------------------------------------[0m
+[1;34m### docker_cli_prepare_launch.log [0m
+--> (139) [1;32mINFO[0m: -----------------Relaunching in Docker after 139s------------------ [ [1;32mhere comes the 🐳[0m ]
+--> (865) [1;32mINFO[0m: -------------Docker run finished after 865s------------------------ [ [1;32m🐳 successfull[0m ]
+--> (865) [1;32mINFO[0m: Cleaning up [ [1;32mplease wait for cleanups to finish[0m ]
+[1;30m------------------------------------------------------------------------------------------------------------[0m
