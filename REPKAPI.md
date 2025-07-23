@@ -11,7 +11,9 @@ Armbian-build представляет собой фреймворк автом�
 ## Для сборки образа клонировать репозиторий
 
 ```bash
-git clone https://github.com/non3via/armbian-build.git && cd ./armbian-build
+git clone https://github.com/non3via/armbian-build.git && \
+    cd ./armbian-build && \
+    chmod +x ./compile.sh
 ```
 
 ## Собрать Armbian (minimal, legacy)
